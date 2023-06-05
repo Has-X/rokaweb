@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rókales Alapítvány</title>
+</head>
+
+
+<body>
+    <div class="modal" id="donation">
+        <div class="modal-header">
+            <div class="close-wrapper">
+                <span class="modal-header-text">Támogatás</span>
+                <span class="close" onclick="closeDonation()">&times;</span>
+            </div>
+        </div>
+        <div class="modal-donate-container" id="donateFrame">
+            <script src="https://donorbox.org/widget.js" paypalExpress="false"></script>
+            <iframe
+                src="https://donorbox.org/embed/ember-es-roka-baratsagban?default_interval=o&hide_donation_meter=true&show_content=true"
+                name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0"
+                scrolling="yes" height="900px" width="100%"
+                style="max-width: 100%; min-width: 100%; max-height:none!important; overflow: scroll;"></iframe>
+        </div>
+    </div>
+    <div class="logo-container">
+        <div class="left-logos">
+            <img src="/images/img12.png" alt="Image 12">
+        </div>
+        <div class="right-logos">
+            <div class="logo">
+                <a href="https://www.facebook.com/rokales" target="_blank"><img src="/images/fb.svg" alt="Image 13"></a>
+            </div>
+            <div class="logo">
+                <a href="https://www.instagram.com/foxy_rokales/" target="_blank"><img src="/images/ig.svg"
+                        alt="Image 13"> </a>
+            </div>
+            <div class="logo">
+                <a href="https://www.youtube.com/channel/UCYFLCYqjDyHeiN7zsNQthxA" target="_blank"><img
+                        src="/images/yt.svg" alt="Image 13"> </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="top-bg-content">
+        <div class="top-bg-button">
+            <a onclick="openDonation()">Támogatás</a>
+        </div>
+        <div class="top-bg">
+            <div class="top-bg-text">
+                <h1>Segítsük együtt a Rókákat</h1>
+                <h2>Számlaszámunk: 11702043-21463419<br>IBAN: HU89 11702043-21463419-00000000</h2>
+            </div>
+            <div class="top-darker-bg">
+            </div>
+        </div>
+    </div>
+    <div class="top-overlay">
+        <div class="card-title">
+            <a>A Rókales Története</a>
+        </div>
+        <div class="box">
+            <div class="imgbox">
+                <img src="images/img4.jpg" alt="">
+            </div>
+            <div class="content">
+                <p>14 évvel ezelőtt kezdődött az a szeretet, amely az állatok felé húzott. 14 éve még csak kóbor
+                    cicákkal találkoztam, saját költségemen etettem és gondoztam, ivartalanítottam és gyógyítottam
+                    cica
+                    kolóniákat. Egyszer csak, több, mint 4 éve a cicák mellé társult egy kis rókalány. A rókákkal
+                    való
+                    kapcsolat, szeretet, törődés innentől indult el bennem és körülöttem. Megismerkedtünk, és
+                    elképesztő
+                    kapcsolatot alakítottunk ki.<br><br>A bizalom olyan mértékű volt, hogy mikor megszülte
+                    kicsinyeit,
+                    majd kihívta nekem a kotorékból
+                    játszani, s nem féltette tőlem, sokszor egyedül hagyott velük.<br><br>Így kezdődött a
+                    rókaszerelem
+                    már jópár éve, azóta rengeteget tanultam tőlük.
+                    <a onclick="openDonation()"><span>Támogatás</span></a>
+                </p>
+            </div>
+        </div>
+        <div class="card-title">
+            <a>Szeretetből Alapítvány</a>
+        </div>
+        <div class="box">
+            <div class="imgbox">
+                <img src="images/img5.jpg" alt="">
+            </div>
+            <div class="content">
+                <p>
+                    Jelenleg 2 olyan kis róka (egy rókalány Luca, és egy rókafiú, Foxy) van mellettem, akik kézhez,
+                    az
+                    én kezemhez szoktak, kinti/benti tartással, egy balaton melletti hatalmas nagy területen élnek.
+                    Mellettem, velem, de mégis szabadon.<br><br>
+                    Csodálatos lények, elképesztően aktív, hihetetlen észjárású- kíváncsi ördögök.<br><br>
+                    Napi 6-8 órát töltök velük, illetve más rókákat is megfigyelek, ismereteimet egy szórakoztató
+                    sok
+                    millió nézettséggel bíró közösségi oldalon mutatom be, facebook, instagram, tiktok, youtube
+                    csatornákon lehet nyomon követni a mindennapjainkat.<br><br>
+                    Megítélésük javítása, e csodás állatok igazi megismerése miatt osztom meg videóim.
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <p>
+                    Egyre több támogató barát, ismeretlen ismerős bíztatott abban, hogy hozzak létre egy
+                    alapítványt,
+                    amely vadállatmentéssel foglalkozik. Célom a magyarországi rókák helyzetének jobbá tétele, a
+                    sérült,
+                    becsapdázott egyedek mentése, orvosi kezelése, rehabilitációja.
+                    <br><br>
+                    Így született meg a Rókales Alapítvány ötlete. A megvalósításhoz néhány barátom, és ismeretlen
+                    ismerősök is csatlakoztak.
+                    Célunk, hogy egyedülálló módon szeretnénk a sérült, beteg, meglőtt, kotorék mentett egyedeket
+                    egy
+                    nagy területen segíteni, és rehabilitálni a megfelelő módon. Szeretnénk ezt az álmot
+                    megvalósítani, természetesen olyan formában ami megfelel mindenfajta előírásnak, szabályzatnak, a
+                    megfelelő
+                    jogi
+                    keretek között, és a rókáknak a legoptimálisabb feltételeket biztosítva.
+                    <br><br>
+                    Rengeteg önkéntes van, akik az ország egész területén támogatják a céljainkat.
+                    <a onclick="openDonation()"><span>Támogatás</span></a>
+                </p>
+            </div>
+            <div class="imgbox">
+                <img src="images/img6.jpg" alt="">
+            </div>
+        </div>
+        <div class="middle-bg">
+            <div class="bottom-overlay">
+                <div class="contant-container">
+                    <div class="contact-splitter">
+                        <div class="contact-text-box">
+                            <h2>Írj nekünk bátran!</h2>
+                            <p>A kapcsolati űrlap használatával elérhetsz minket, akár önkéntes felajánlásokkal, akár
+                                sérült,
+                                mentésre szoruló kisrókákkal kapcsolatosan szeretnének megkeresni bennünket.</p>
+                        </div>
+                        <div class="contact-form">
+                            <h1>Önkéntesség</h1>
+                            <form action="contact.php" method="post">
+                                <div class="inputbox">
+                                    <input type="text" name="name" required="required">
+                                    <span>Teljes név</span>
+                                </div>
+                                <div class="inputbox">
+                                    <input type="email" name="email" required="required">
+                                    <span>E-mail cím</span>
+                                </div>
+                                <div class="inputbox">
+                                    <input type="text" name="facebook" required="required">
+                                    <span>Facebook profil (link)</span>
+                                </div>
+                                <div class="inputbox">
+                                    <input type="submit" name="submit" value="Küldés">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="contact-splitter">
+                        <div class="contact-form">
+                            <h1>Kapcsolat</h1>
+                            <form action="contact.php" method="post">
+                                <div class="inputbox">
+                                    <input type="text" name="name" required="required">
+                                    <span>Teljes név</span>
+                                </div>
+                                <div class="inputbox">
+                                    <input type="email" name="email" required="required">
+                                    <span>E-mail cím</span>
+                                </div>
+                                <div class="inputbox">
+                                    <textarea name="message" required="required"></textarea>
+                                    <span>Üzenet</span>
+                                </div>
+                                <div class="inputbox">
+                                    <input type="submit" name="submit" value="Küldés">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="contact-text-box">
+                            <h2>Jelentkezz Önkéntesnek!</h2>
+                            <p>Jelentkezz önkéntesnek és segíts nekünk, akár egyszeri alkalommal, akár napi szinten.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    ©
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script> Rókales Alapítvány | Minden jog fenntartva
+
+                </div>
+            </div>
+            <style>
+                body {
+                    margin: 0;
+                    padding: 0;
+                    font-family: Montserrat, sans-serif;
+                    overflow-wrap: break-word
+                }
+
+                .logo-container {
+                    display: flex;
+                    align-items: center;
+                    margin: 1%
+                }
+
+                .logo-container .left-logos {
+                    display: flex;
+                    justify-content: flex-start;
+                    width: 50%
+                }
+
+                .logo-container .left-logos img {
+                    width: 30%;
+                    height: 30%;
+                    margin-left: 5%
+                }
+
+                .logo-container .right-logos {
+                    display: flex;
+                    justify-content: flex-end;
+                    width: 50%
+                }
+
+                .logo-container .right-logos .logo a img {
+                    width: 30px;
+                    height: 30px
+                }
+
+                .logo-container .right-logos .logo {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 5px;
+                    background-color: #deb887
+                }
+
+                .logo-container .right-logos .logo:hover {
+                    background-color: brown;
+                    border-radius: 50%;
+                    transition: .5s
+                }
+
+                .logo-container .right-logos .logo a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    transition: .5s
+                }
+
+                .top-bg {
+                    background: url(images/img11.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    position: relative;
+                    height: 500px;
+                    width: 100%;
+                    z-index: -1;
+                    background-attachment: fixed;
+                    overflow: hidden
+                }
+
+                .top-bg::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    background-color: rgba(0, 0, 0, .5);
+                    background: linear-gradient(to right, rgba(0, 0, 0, .3) 0, rgba(0, 0, 0, .2) 10%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, .2) 90%, rgba(0, 0, 0, .3) 100%)
+                }
+
+                .top-darker-bg {
+                    position: relative;
+                    z-index: 0
+                }
+
+                .top-bg-text {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    background-color: rgba(0, 0, 0, .5);
+                    background: linear-gradient(to right, rgba(0, 0, 0, .3) 0, rgba(0, 0, 0, .2) 10%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, .2) 90%, rgba(0, 0, 0, .3) 100%)
+                }
+
+                .top-bg-button {
+                    position: absolute;
+                    top: 60%;
+                    left: 5%;
+                    transform: translateY(-50%);
+                    background: #fff;
+                    color: #000;
+                    font-size: 16px;
+                    font-weight: 700;
+                    padding: 8px 20px;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    border-radius: 20px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+                }
+
+                .top-bg-text p {
+                    position: absolute;
+                    width: auto;
+                    height: auto;
+                    font-size: 16px;
+                }
+
+                .top-bg-text h1 {
+                    position: absolute;
+                    top: 10%;
+                    left: 5%;
+                    color: #fff;
+                    font-size: 40px;
+                    font-weight: 700;
+                    text-shadow: 0 0 10px rgba(0, 0, 0, .5)
+                }
+
+                .top-bg-text h2 {
+                    position: absolute;
+                    top: 70%;
+                    left: 5%;
+                    color: #fff;
+                    font-size: 24px;
+                    font-weight: 700;
+                    text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+                }
+
+                .middle-bg {
+                    background: url(images/img2.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    position: absolute;
+                    height: 500px;
+                    width: 100%;
+                    z-index: -1;
+                    background-attachment: fixed
+                }
+
+                .top-overlay {
+                    position: absolute;
+                    top: 500;
+                    left: 0;
+                    width: 100%;
+                    height: auto;
+                    background-color: rgba(33, 77, 33, .4)
+                }
+
+                .top-overlay::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: .1;
+                    background-image: url(/images/img7.png);
+                    background-repeat: repeat;
+                    z-index: -1
+                }
+
+                .card-title {
+                    text-align: center;
+                    color: #000;
+                    font-size: 50px;
+                    font-weight: 700;
+                    margin-top: 80px
+                }
+
+                .card-title a {
+                    background-color: rgba(255, 255, 255, .4);
+                    border-radius: 20px;
+                    padding-left: 2%;
+                    padding-right: 2%
+                }
+
+                .box {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .box .imgbox {
+                    height: auto;
+                    width: 50%;
+                    margin: 5%;
+                    border-radius: 30px;
+                    overflow: hidden;
+                    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                }
+
+                .box .imgbox img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .box .content {
+                    width: 50%;
+                    height: 100%;
+                    padding: 2%;
+                    box-sizing: border-box
+                }
+
+                .box .content p {
+                    margin: 0 0 20px;
+                    padding: 5%;
+                    color: #000;
+                    font-size: 20px;
+                    font-weight: 400;
+                    background-color: rgba(255, 255, 255, .4);
+                    border-radius: 30px;
+                    overflow-wrap: break-word
+                }
+
+                .box .content a {
+                    display: inline-block;
+                    text-decoration: none;
+                    color: white;
+                    background: forestgreen;
+                    font-size: 30px;
+                    padding-left: 2%;
+                    padding-right: 2%;
+                    padding-top: 0.5%;
+                    font-weight: 500;
+                    border-radius: 10px;
+                    transition: .5s;
+                    margin-top: 5%;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                    border-bottom: #000 solid 2px;
+                    text-transform: uppercase;
+                }
+
+                .box .content a:hover {
+                    background: black;
+                    color: forestgreen;
+                    transition: .5s;
+                }
+
+                .bottom-overlay {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 100%;
+                    height: auto;
+                    background-color: rgba(138, 43, 226, .8)
+                }
+
+                .bottom-overlay::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 1;
+                    background-image: url(/images/img10.png);
+                    background-repeat: repeat;
+                    z-index: -1
+                }
+
+                @media (max-width: 600px) {
+
+                    .top-bg-content h1 {
+                        position: absolute;
+                        top: 5;
+                        left: 5%;
+                        font-size: 40px;
+                        margin-left: 5%;
+                        margin-right: 5%;
+                    }
+
+                    .top-bg-content h2 {
+                        position: absolute;
+                        top: 70%;
+                        left: 5%;
+                        font-size: 20px;
+                        margin-left: 5%;
+                        margin-right: 5%;
+                    }
+
+                    .box .imgbox img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                    .box .imgbox {
+                        width: 80%;
+                        height: auto;
+                    }
+
+                    .box .content {
+                        width: 80%;
+                        height: 80%;
+                        padding: 2%;
+                        overflow-wrap: break-word;
+                        overflow: hidden;
+                    }
+
+                    .box {
+                        flex-direction: column;
+                    }
+
+                    .logo-container .left-logos img {
+                        width: 50%;
+                        height: 50%;
+                        margin-left: 5%
+                    }
+
+                    .logo-container .right-logos .logo {
+                        margin-top: 3%;
+                        margin-bottom: 3%;
+
+                    }
+
+                    .card-title {
+                        font-size: 40px;
+                        font-weight: 700;
+                        margin-top: 80px;
+                        overflow-wrap: break-word;
+                    }
+
+                    
+                    
+
+
+
+
+
+                }
+
+                .contant-container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    height: auto
+                }
+
+                .contact-splitter {
+                    width: 50%;
+                    height: 100%;
+                    padding: 2%;
+                    box-sizing: border-box
+                }
+
+                .contact-text-box {
+                    margin: 0 0 20px;
+                    padding: 5%;
+                    background-color: rgba(255, 255, 255, .8);
+                    border-radius: 30px;
+                    overflow-wrap: break-word;
+                }
+
+                .contact-form {
+                    align-items: center;
+                    margin-top: 5%;
+                    width: 50%;
+                    height: auto;
+                    padding: 2%;
+                    box-sizing: border-box;
+                    background-color: rgba(255, 255, 255, .8);
+                    border-radius: 30px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 10%;
+                    overflow-wrap: break-word;
+                }
+
+                .contact-form .inputbox {
+                    position: relative;
+                    width: 100%;
+                    margin-bottom: 7%
+                }
+
+                .contact-form .inputbox input,
+                .contact-form .inputbox textarea {
+                    width: 100%;
+                    padding: 5px 0;
+                    font-size: 16px;
+                    color: #000;
+                    margin: 10px 0;
+                    border: none;
+                    border-bottom: 2px solid #000;
+                    outline: 0;
+                    resize: none;
+                    border-radius: 10px;
+                    font-family: 'Source Code Pro', monospace
+                }
+
+                .contact-form .inputbox span {
+                    position: absolute;
+                    left: 1%;
+                    top: 45%;
+                    transform: translateY(-50%);
+                    font-size: 16px;
+                    color: #000;
+                    pointer-events: none;
+                    transition: .5s;
+                    background-color: rgba(99, 99, 99, .8);
+                    opacity: .5;
+                    border-radius: 10%;
+                    margin-left: 1%;
+                    padding-left: 2%;
+                    padding-right: 2%;
+                    padding-top: .25%;
+                    padding-bottom: .25%
+                }
+
+                .contact-form .inputbox input:focus~span,
+                .contact-form .inputbox input:valid~span {
+                    transform: translateY(-150%);
+                    left: 0;
+                    font-size: 12px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    color: #fff;
+                    background-color: rgba(0, 0, 0, 1);
+                    padding: .8%;
+                    border-radius: 10%;
+                    opacity: 1
+                }
+
+                .contact-form .inputbox textarea:focus~span,
+                .contact-form .inputbox textarea:valid~span {
+                    transform: translateY(-180%);
+                    left: 0;
+                    font-size: 12px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    color: #fff;
+                    background-color: rgba(0, 0, 0, 1);
+                    padding: .8%;
+                    border-radius: 10%;
+                    opacity: 1
+                }
+
+                .contact-form h1 {
+                    margin: 0 0 15px;
+                    padding: 0;
+                    color: #000;
+                    text-align: center;
+                    font-size: 30px;
+                    font-weight: 500
+                }
+
+                .contact-text-box h2 {
+                    margin: 0 0 6%;
+                    padding: 0;
+                    color: #444;
+                    text-align: center;
+                    font-size: 150%;
+                    font-weight: 500
+                }
+
+                .contact-text-box p {
+                    margin: 0 0 15px;
+                    padding: 0;
+                    color: #000;
+                    text-align: left;
+                    font-size: 100%;
+                    font-weight: 500
+                }
+
+                @media (max-width: 600px) {
+
+                    .contant-container {
+                        display: flex;
+                        flex-direction: column-reverse;
+                    }
+
+                    .contact-splitter {
+                        flex-direction: column;
+                    }
+
+                    .contact-text-box {
+                        width: 100%;
+                        height: auto;
+                        padding: 2%;
+                        box-sizing: border-box;
+                        background-color: rgba(255, 255, 255, .8);
+                        border-radius: 30px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-bottom: 10%;
+                        overflow-wrap: break-word;
+                    }
+
+                    .contant-container {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        height: auto
+                    }
+
+                    .contact-form {
+                        width: 100%;
+                        height: auto;
+                        padding: 2%;
+                        box-sizing: border-box;
+                        background-color: rgba(255, 255, 255, .8);
+                        border-radius: 30px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-bottom: 10%;
+                        overflow-wrap: break-word;
+                    }
+
+                    .contact-form .inputbox {
+                        position: relative;
+                        width: 100%;
+                        margin-bottom: 7%
+                    }
+
+                    .contact-form .inputbox input,
+                    .contact-form .inputbox textarea {
+                        width: 100%;
+                        padding: 5px 0;
+                        font-size: 16px;
+                        color: #000;
+                        margin: 10px 0;
+                        border: none;
+                        border-bottom: 2px solid #000;
+                        outline: 0;
+                        resize: none;
+                        border-radius: 10px;
+                        font-family: 'Source Code Pro', monospace
+                    }
+
+                    .contact-form .inputbox span {
+                        position: absolute;
+                        left: 1%;
+                        top: 45%;
+                        transform: translateY(-50%);
+                        font-size: 16px;
+                        color: #000;
+                        pointer-events: none;
+                        transition: .5s;
+                        background-color: rgba(99, 99, 99, .8);
+                        opacity: .5;
+                        border-radius: 10%;
+                        margin-left: 1%;
+                        padding-left: 2%;
+                        padding-right: 2%;
+                        padding-top: .25%;
+                        padding-bottom: .25%
+                    }
+
+                }
+
+                .modal {
+                    position: fixed;
+                    z-index: 5;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 90%;
+                    max-height: 700px;
+                    width: 425px;
+                    overflow: auto;
+                    border-radius: 50px;
+                    background-color: rgb(255, 255, 255);
+                    box-shadow: 0px 0px 40px rgba(0, 0, 0);
+                    border-bottom: 10px solid #000;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+
+
+                .modal-content {
+                    background-color: #fefefe;
+                    width: 100%;
+                    height: 100%;
+                    overflow: auto;
+                    display: flex;
+                    float: center;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    overflow-x: hidden;
+                }
+
+                .top-bg-button {
+                    top: 400px;
+                    left: 65px
+                }
+
+                /* The Close Button */
+
+                .close-wrapper {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                .close {
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: gray;
+                    color: white;
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-right: 3%;
+                    margin-top: 3%;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+
+                .close:hover,
+                .close:focus {
+                    background-color: red;
+                    color: white;
+                    transition: 0.3s;
+                }
+
+                .modal-header {
+                    padding: 2px 1px;
+                    background-color: #000;
+                    color: white;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: relative;
+                }
+
+                .modal-header-text {
+                    right: 80px;
+                    text-align: center;
+                    display: flex;
+                    float: center;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    font-size: 30px;
+                    overflow-wrap: break-word;
+                    font-weight: 700;
+                    padding-top: 2%;
+                    padding-bottom: 2%;
+                }
+
+                .modal-donate-container {
+                    width: 100%;
+                    height: 100%;
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                    scrollbar-color: transparent transparent;
+                    background-color: #000;
+                    overflow-y: scroll;
+                }
+
+
+                @media screen and (max-width: 425px) {
+                    .modal {
+                        width: 100%;
+                    }
+                }
+
+
+                @media (max-width: 768px) {
+
+                    .top-bg-text button {
+                        left: 10%
+                    }
+
+                    .modal {
+                        width: 80%;
+                        height: 50%;
+                        position: fixed;
+                        overflow-x: hidden;
+                    }
+
+                    .modal-header-text {
+                        right: 15%;
+                    }
+
+                    .modal-content {
+                        width: 100%;
+                        height: 100%;
+                        overflow-x: hidden;
+                    }
+
+
+                    .close {
+                        width: 25px;
+                        height: 25px;
+                        font-size: 15px;
+                        margin-top: 10px;
+                        margin-right: 20px;
+                    }
+                }
+
+                .copyright {
+                    position: relative;
+                    bottom: 0;
+                    width: 100%;
+                    height: 50px;
+                    background-color: #000;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 700;
+                    overflow-wrap: break-word;
+                    padding-top: 1%;
+                    padding-bottom: 1%;
+                }
+
+                @media (min-height: 1400px) {
+                    .modal {
+                        overflow: hidden;
+                        overflow-x: hidden;
+
+                    }
+                }
+            </style>
+            <script>
+                function closeDonation() {
+                    document.getElementById("donation").style.display = "none";
+                }
+
+                function openDonation() {
+                    document.getElementById("donation").style.display = "block";
+                }
+
+            </script>
+</body>
+
+</html>
