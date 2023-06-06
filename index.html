@@ -18,7 +18,7 @@
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' https://donorbox.org 'nonce-8Hq&m6h^6fQzz2CUN93*H!&S$jH8D!m8Ms55Cj^ZtE!FA85%&Wtq7sn%D4LPZ6fkt67#ypAY#C%#LjeaKxGw&RD%$9c^&ASeUD9RA@#zy3Fv2%PE4h52VPHjn9Mrqjsv' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; frame-src https://donorbox.org;">
+        content="default-src 'self'; script-src 'self' https://donorbox.org 'nonce-8Hq&m6h^6fQzz2CUN93*H!&S$jH8D!m8Ms55Cj^ZtE!FA85%&Wtq7sn%D4LPZ6fkt67#ypAY#C%#LjeaKxGw&RD%$9c^&ASeUD9RA@#zy3Fv2%PE4h52VPHjn9Mrqjsv' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; frame-src https://donorbox.org; script-src 'self' 'unsafe-inline' 'nonce-8Hq&m6h^6fQzz2CUN93*H!&S$jH8D!m8Ms55Cj^ZtE!FA85%&Wtq7sn%D4LPZ6fkt67#ypAY#C%#LjeaKxGw&RD%$9c^&ASeUD9RA@#zy3Fv2%PE4h52VPHjn9Mrqjsv' /cdn-cgi/challenge-platform/;">
     <meta http-equiv="Expect-CT"
         content="enforce, max-age=30, report-uri='https://security.rokalesalapitvany.com/report-ct'">
     <meta name="referrer" content="no-referrer">
@@ -37,20 +37,6 @@
             </div>
         </div>
         <div class="modal-donate-container" id="donateFrame">
-            <script src="https://donorbox.org/widget.js" paypalExpress="false" defer></script>
-            <iframe
-                id="donorbox-iframe"
-                src="https://donorbox.org/embed/ember-es-roka-baratsagban?default_interval=o&hide_donation_meter=true&show_content=true"
-                loading="lazy"
-                name="donorbox"
-                allowpaymentrequest="allowpaymentrequest"
-                seamless="seamless"
-                frameborder="0"
-                scrolling="yes"
-                height="900px"
-                width="100%"
-                style="max-width: 100%; min-width: 100%; max-height:none!important; overflow: scroll;"
-            ></iframe>
         </div>
     </div>
     <div class="logo-container">
@@ -968,13 +954,30 @@
                     }
 
                     function openDonation() {
+                        if (!document.getElementById("donateIFrame")) {
+                            var script = document.createElement("script");
+                            script.src = "https://donorbox.org/widget.js";
+                            script.setAttribute("paypalExpress", "false");
+                            script.defer = true;
+                            document.body.appendChild(script);
+
+                            var iframe = document.createElement("iframe");
+                            iframe.id = "donateIFrame";
+                            iframe.src = "https://donorbox.org/embed/ember-es-roka-baratsagban?default_interval=o&hide_donation_meter=true&show_content=true";
+                            iframe.loading = "lazy";
+                            iframe.name = "donorbox";
+                            iframe.allowpaymentrequest = "allowpaymentrequest";
+                            iframe.seamless = "seamless";
+                            iframe.frameborder = "0";
+                            iframe.scrolling = "yes";
+                            iframe.height = "900px";
+                            iframe.width = "100%";
+                            iframe.style = "max-width: 100%; min-width: 100%; max-height:none!important; overflow: scroll;";
+                            document.getElementById("donateFrame").appendChild(iframe);
+
+                        }
                         document.getElementById("donation").style.display = "block";
                     }
-
-                    window.addEventListener("DOMContentLoaded", function () {
-                        var donorboxIframe = document.getElementById("donorbox-iframe");
-                        donorboxIframe.addEventListener("load", openDonation);
-                    });
 
                 </script>
 </body>
