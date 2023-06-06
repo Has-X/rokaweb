@@ -17,8 +17,10 @@
     <meta name="csrf-token" content="ABC123">
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
     <meta name="referrer" content="no-referrer">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://donorbox.org 'nonce-8Hq&m6h^6fQzz2CUN93*H!&S$jH8D!m8Ms55Cj^ZtE!FA85%&Wtq7sn%D4LPZ6fkt67#ypAY#C%#LjeaKxGw&RD%$9c^&ASeUD9RA@#zy3Fv2%PE4h52VPHjn9Mrqjsv' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; frame-src https://donorbox.org;">
-    <meta http-equiv="Expect-CT" content="enforce, max-age=30, report-uri='https://security.rokalesalapitvany.com/report-ct'">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://donorbox.org 'nonce-8Hq&m6h^6fQzz2CUN93*H!&S$jH8D!m8Ms55Cj^ZtE!FA85%&Wtq7sn%D4LPZ6fkt67#ypAY#C%#LjeaKxGw&RD%$9c^&ASeUD9RA@#zy3Fv2%PE4h52VPHjn9Mrqjsv' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; frame-src https://donorbox.org;">
+    <meta http-equiv="Expect-CT"
+        content="enforce, max-age=30, report-uri='https://security.rokalesalapitvany.com/report-ct'">
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
     <meta charset="UTF-8">
@@ -35,17 +37,25 @@
             </div>
         </div>
         <div class="modal-donate-container" id="donateFrame">
-            <script src="https://donorbox.org/widget.js" paypalExpress="false"></script>
+            <script src="https://donorbox.org/widget.js" paypalExpress="false" defer></script>
             <iframe
+                id="donorbox-iframe"
                 src="https://donorbox.org/embed/ember-es-roka-baratsagban?default_interval=o&hide_donation_meter=true&show_content=true"
-                name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0"
-                scrolling="yes" height="900px" width="100%"
-                style="max-width: 100%; min-width: 100%; max-height:none!important; overflow: scroll;"></iframe>
+                loading="lazy"
+                name="donorbox"
+                allowpaymentrequest="allowpaymentrequest"
+                seamless="seamless"
+                frameborder="0"
+                scrolling="yes"
+                height="900px"
+                width="100%"
+                style="max-width: 100%; min-width: 100%; max-height:none!important; overflow: scroll;"
+            ></iframe>
         </div>
     </div>
     <div class="logo-container">
         <div class="left-logos">
-            <img src="/images/img12.webp" alt="Image 12" loading="lazy">
+            <img src="/images/img12.webp" alt="Rókales logó" loading="lazy">
         </div>
         <div class="right-logos">
             <div class="logo">
@@ -81,7 +91,7 @@
         </div>
         <div class="box">
             <div class="imgbox">
-                <img src="images/img4.webp" alt="" loading="lazy">
+                <img src="images/img4.webp" alt="Ülő róka" loading="lazy">
             </div>
             <div class="content">
                 <p>14 évvel ezelőtt kezdődött az a szeretet, amely az állatok felé húzott. 14 éve még csak kóbor
@@ -106,7 +116,7 @@
         </div>
         <div class="box">
             <div class="imgbox">
-                <img src="images/img5.webp" alt="" loading="lazy">
+                <img src="images/img5.webp" alt="Játékos róka" loading="lazy">
             </div>
             <div class="content">
                 <p>
@@ -147,7 +157,7 @@
                 </p>
             </div>
             <div class="imgbox">
-                <img src="images/img6.webp" alt="" loading="lazy">
+                <img src="images/img6.webp" alt="Figyelő róka" loading="lazy">
             </div>
         </div>
         <div class="middle-bg">
@@ -162,7 +172,7 @@
                         </div>
                         <div class="contact-form">
                             <h1>Önkéntesség</h1>
-                            <form action="contact.php" method="post">
+                            <form action="/api/volunteer" method="post">
                                 <div class="inputbox">
                                     <input type="text" name="name" required="required">
                                     <span>Teljes név</span>
@@ -184,7 +194,7 @@
                     <div class="contact-splitter">
                         <div class="contact-form">
                             <h1>Kapcsolat</h1>
-                            <form action="contact.php" method="post">
+                            <form action="/api/contact" method="post">
                                 <div class="inputbox">
                                     <input type="text" name="name" required="required">
                                     <span>Teljes név</span>
@@ -806,7 +816,8 @@
                     overflow-y: scroll;
                     overflow-x: hidden;
                     -ms-overflow-style: none;
-                    scrollbar-width: none
+                    scrollbar-width: none;
+                    display: none;
                 }
 
                 .modal-content {
@@ -950,16 +961,22 @@
                     }
                 }
             </style>
-            <script nonce="8Hq&m6h^6fQzz2CUN93*H!&S$jH8D!m8Ms55Cj^ZtE!FA85%&Wtq7sn%D4LPZ6fkt67#ypAY#C%#LjeaKxGw&RD%$9c^&ASeUD9RA@#zy3Fv2%PE4h52VPHjn9Mrqjsv">
-                function closeDonation() {
-                    document.getElementById("donation").style.display = "none";
-                }
+            <script
+                nonce="8Hq&m6h^6fQzz2CUN93*H!&S$jH8D!m8Ms55Cj^ZtE!FA85%&Wtq7sn%D4LPZ6fkt67#ypAY#C%#LjeaKxGw&RD%$9c^&ASeUD9RA@#zy3Fv2%PE4h52VPHjn9Mrqjsv">
+                    function closeDonation() {
+                        document.getElementById("donation").style.display = "none";
+                    }
 
-                function openDonation() {
-                    document.getElementById("donation").style.display = "block";
-                }
+                    function openDonation() {
+                        document.getElementById("donation").style.display = "block";
+                    }
 
-            </script>
+                    window.addEventListener("DOMContentLoaded", function () {
+                        var donorboxIframe = document.getElementById("donorbox-iframe");
+                        donorboxIframe.addEventListener("load", openDonation);
+                    });
+
+                </script>
 </body>
 
 </html>
