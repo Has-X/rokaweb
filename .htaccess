@@ -1,3 +1,8 @@
 RewriteEngine On
-RewriteCond %{REQUEST_URI} !^/images
+RewriteCond %{REQUEST_URI} !^/images [OR]
+RewriteCond %{REQUEST_URI} !^robots.txt [OR]
+RewriteCond %{REQUEST_URI} !^sitemap.xml [OR]
+RewriteCond %{REQUEST_URI} !^/.well-known [OR]
+RewriteCond %{REQUEST_URI} !^/icons [OR]
+RewriteCond %{REQUEST_URI} !^/security.txt
 RewriteRule ^(.*)$ /index.html [L]
