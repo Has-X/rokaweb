@@ -18,8 +18,8 @@
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self' https://cdnjs.cloudflare.com https://donorbox.org img.imageboss.me cdn.jsdelivr.net; script-src 'self' https://donorbox.org 'nonce-8Hq&m6h^6fQzz2CUN93*H!&S$jH8D!m8Ms55Cj^ZtE!FA85%&Wtq7sn%D4LPZ6fkt67#ypAY#C%#LjeaKxGw&RD%$9c^&ASeUD9RA@#zy3Fv2%PE4h52VPHjn9Mrqjsv' 'unsafe-inline' https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js cdn.jsdelivr.net/gh/imageboss/imageboss-web@5.1.0/dist/imageboss.min.js; style-src 'self' 'unsafe-inline'; frame-src https://donorbox.org; img-src 'self' img.imageboss.me data:; object-src 'none';">
-    <meta http-equiv="Expect-CT"
+        content="default-src 'self' https://cdnjs.cloudflare.com https://donorbox.org img.imageboss.me cdn.jsdelivr.net; script-src 'self' https://donorbox.org 'unsafe-inline' https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js cdn.jsdelivr.net/gh/imageboss/imageboss-web@5.1.0/dist/imageboss.min.js; style-src 'self' 'unsafe-inline'; frame-src https://donorbox.org; img-src 'self' img.imageboss.me data:; object-src 'none'; https://static.cloudflareinsights.com"
+        <meta http-equiv="Expect-CT"
         content="enforce, max-age=30, report-uri='https://security.rokalesalapitvany.com/report-ct'">
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
@@ -190,17 +190,17 @@
                             <form action="/api/volunteer" method="post">
                                 <div class="inputbox">
                                     <div class="container"><label for="name">Név</label></div>
-                                    <input type="text" name="name" required="required">
+                                    <input type="text" name="name" id="name" required="required">
                                     <span>Teljes hivatalos neved</span>
                                 </div>
                                 <div class="inputbox">
                                     <div class="container"><label for="email">E-mail</label></div>
-                                    <input type="email" name="email" required="required">
+                                    <input type="email" name="email" id="email" required="required">
                                     <span>Olyan címet adj meg, amit gyakran olvasol</span>
                                 </div>
                                 <div class="inputbox">
-                                    <div class="container"><label for="text">Miben szeretnél segíteni?</label></div>
-                                    <select name="request" required="required">
+                                    <div class="container"><label for="request">Miben szeretnél segíteni?</label></div>
+                                    <select name="request" id="request" required="required">
                                         <option value="1">Tárgyilagos adománnyal való segítés</option>
                                         <option value="2">Menhelyen való önkéntesség</option>
                                         <option value="3">Sérült rókák mentése / szállítása</option>
@@ -208,13 +208,13 @@
                                     </select>
                                 </div>
                                 <div class="inputbox">
-                                    <div class="container"><label for="text">Hol tudsz segíteni?</label></div>
-                                    <input type="text" name="location" required="required">
+                                    <div class="container"><label for="location">Hol tudsz segíteni?</label></div>
+                                    <input type="text" name="location" id="location" required="required">
                                     <span>Add meg, hogy hol tudsz segíteni (Település, Vármegye) </span>
                                 </div>
                                 <div class="inputbox">
-                                    <div class="container"><label for="text">Elérhetőség</label></div>
-                                    <input type="text" name="facebook" required="required">
+                                    <div class="container"><label for="facebook">Elérhetőség</label></div>
+                                    <input type="text" name="facebook" id="facebook" required="required">
                                     <span>Pl: Telefonszám, FB profil link</span>
                                 </div>
                                 <div class="inputbox">
@@ -228,18 +228,18 @@
                             <h1>Kapcsolat</h1>
                             <form action="/api/contact" method="post">
                                 <div class="inputbox">
-                                    <div class="container"><label for="name">Név</label></div>
-                                    <input type="text" name="name" required="required">
+                                    <div class="container"><label for="contact-name">Név</label></div>
+                                    <input type="text" name="name" id="contact-name" required="required">
                                     <span>Teljes hivatalos neved</span>
                                 </div>
                                 <div class="inputbox">
-                                    <div class="container"><label for="email">E-mail</label></div>
-                                    <input type="email" name="email" required="required">
+                                    <div class="container"><label for="contact-email">E-mail</label></div>
+                                    <input type="email" name="email" id="contact-email" required="required">
                                     <span>Olyan címet adj meg, amit gyakran olvasol</span>
                                 </div>
                                 <div class="inputbox">
-                                    <div class="container"><label for="text">Üzenet</label></div>
-                                    <textarea name="message" required="required"></textarea>
+                                    <div class="container"><label for="message">Üzenet</label></div>
+                                    <textarea name="message" id="message" required="required"></textarea>
                                     <span>Írd le mit szeretnél közölni velünk</span>
                                 </div>
                                 <div class="inputbox">
@@ -280,6 +280,8 @@
                 .logo-container .left-logos img {
                     width: 30%;
                     height: 30%;
+                    min-width: 101px;
+                    min-height: 32px;
                     margin-left: 5%
                 }
 
@@ -1015,40 +1017,39 @@
                     }
                 }
             </style>
-            <script
-                nonce="8Hq&m6h^6fQzz2CUN93*H!&S$jH8D!m8Ms55Cj^ZtE!FA85%&Wtq7sn%D4LPZ6fkt67#ypAY#C%#LjeaKxGw&RD%$9c^&ASeUD9RA@#zy3Fv2%PE4h52VPHjn9Mrqjsv">
-                    document.getElementById("ev").innerHTML = new Date().getFullYear();
+            <script>
+                document.getElementById("ev").innerHTML = new Date().getFullYear();
 
-                    function closeDonation() {
-                        document.getElementById("donation").style.display = "none";
+                function closeDonation() {
+                    document.getElementById("donation").style.display = "none";
+                }
+
+                function openDonation() {
+                    if (!document.getElementById("donateIFrame")) {
+                        var script = document.createElement("script");
+                        script.src = "https://donorbox.org/widget.js";
+                        script.setAttribute("paypalExpress", "false");
+                        script.defer = true;
+                        document.body.appendChild(script);
+                        var iframe = document.createElement("iframe");
+                        iframe.id = "donateIFrame";
+                        iframe.src = "https://donorbox.org/embed/ember-es-roka-baratsagban?default_interval=o&hide_donation_meter=true&show_content=true";
+                        iframe.loading = "lazy";
+                        iframe.name = "donorbox";
+                        iframe.allowpaymentrequest = "allowpaymentrequest";
+                        iframe.seamless = "seamless";
+                        iframe.frameborder = "0";
+                        iframe.scrolling = "yes";
+                        iframe.height = "900px";
+                        iframe.width = "100%";
+                        iframe.style = "max-width: 100%; min-width: 100%; max-height:none!important; overflow: scroll;";
+                        document.getElementById("donateFrame").appendChild(iframe);
+
                     }
+                    document.getElementById("donation").style.display = "block";
+                }
 
-                    function openDonation() {
-                        if (!document.getElementById("donateIFrame")) {
-                            var script = document.createElement("script");
-                            script.src = "https://donorbox.org/widget.js";
-                            script.setAttribute("paypalExpress", "false");
-                            script.defer = true;
-                            document.body.appendChild(script);
-                            var iframe = document.createElement("iframe");
-                            iframe.id = "donateIFrame";
-                            iframe.src = "https://donorbox.org/embed/ember-es-roka-baratsagban?default_interval=o&hide_donation_meter=true&show_content=true";
-                            iframe.loading = "lazy";
-                            iframe.name = "donorbox";
-                            iframe.allowpaymentrequest = "allowpaymentrequest";
-                            iframe.seamless = "seamless";
-                            iframe.frameborder = "0";
-                            iframe.scrolling = "yes";
-                            iframe.height = "900px";
-                            iframe.width = "100%";
-                            iframe.style = "max-width: 100%; min-width: 100%; max-height:none!important; overflow: scroll;";
-                            document.getElementById("donateFrame").appendChild(iframe);
-
-                        }
-                        document.getElementById("donation").style.display = "block";
-                    }
-
-                </script>
+            </script>
 </body>
 
 </html>
