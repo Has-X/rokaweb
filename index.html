@@ -256,29 +256,29 @@
                             <form id="message-form">
                                 <h1>Kapcsolat</h1>
                                 <div class="inputbox">
-                                    <div class="container"><label for="name">Név</label></div>
+                                    <div class="container"><label for="message-name">Név</label></div>
                                     <input type="text" name="name" id="message-name" required="required">
                                     <span>Teljes hivatalos neved</span>
                                 </div>
                                 <div class="inputbox">
-                                    <div class="container"><label for="email">E-mail</label></div>
+                                    <div class="container"><label for="message-email">E-mail</label></div>
                                     <input type="email" name="email" id="message-email" required="required">
                                     <span>Olyan címet adj meg, amit gyakran olvasol</span>
                                 </div>
                                 <div class="inputbox">
-                                    <div class="container"><label for="message">Üzenet</label></div>
+                                    <div class="container"><label for="message-message">Üzenet</label></div>
                                     <textarea name="message" id="message-message" required="required"></textarea>
                                     <span>Írd le mit szeretnél közölni velünk</span>
                                 </div>
                                 <div>
-                                    <input type="number" name="type" id="message-number" value='2'
+                                    <input type="number" name="type" id="message-number" value="2"
                                         style="display:none;">
                                 </div>
                                 <div class="message-captcha" id="message-captcha"></div>
                                 <div class="status" id="message-status"></div>
                                 <div class="inputbox">
                                     <input type="button" name="submit" value="Küldés" id="message-submit"
-                                        onclick=submitForm(2)>
+                                        onclick="submitForm(2)">
                                 </div>
                             </form>
                         </div>
@@ -315,8 +315,8 @@
                 .logo-container .left-logos img {
                     width: 30%;
                     height: 30%;
-                    min-width: 152px;
-                    min-height: 48px;
+                    min-width: 228px;
+                    min-height: 72px;
                     margin-left: 5%
                 }
 
