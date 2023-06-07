@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="hu">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,13 +18,30 @@
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' https://donorbox.org 'nonce-8Hq&m6h^6fQzz2CUN93*H!&S$jH8D!m8Ms55Cj^ZtE!FA85%&Wtq7sn%D4LPZ6fkt67#ypAY#C%#LjeaKxGw&RD%$9c^&ASeUD9RA@#zy3Fv2%PE4h52VPHjn9Mrqjsv' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; frame-src https://donorbox.org; script-src 'self' 'unsafe-inline' 'nonce-8Hq&m6h^6fQzz2CUN93*H!&S$jH8D!m8Ms55Cj^ZtE!FA85%&Wtq7sn%D4LPZ6fkt67#ypAY#C%#LjeaKxGw&RD%$9c^&ASeUD9RA@#zy3Fv2%PE4h52VPHjn9Mrqjsv' /cdn-cgi/challenge-platform/;">
+        content="default-src 'self' https://cdnjs.cloudflare.com https://donorbox.org img.imageboss.me cdn.jsdelivr.net; script-src 'self' https://donorbox.org 'nonce-8Hq&m6h^6fQzz2CUN93*H!&S$jH8D!m8Ms55Cj^ZtE!FA85%&Wtq7sn%D4LPZ6fkt67#ypAY#C%#LjeaKxGw&RD%$9c^&ASeUD9RA@#zy3Fv2%PE4h52VPHjn9Mrqjsv' 'unsafe-inline' https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js cdn.jsdelivr.net/gh/imageboss/imageboss-web@5.1.0/dist/imageboss.min.js; style-src 'self' 'unsafe-inline'; frame-src https://donorbox.org; img-src 'self' img.imageboss.me data:; object-src 'none';">
     <meta http-equiv="Expect-CT"
         content="enforce, max-age=30, report-uri='https://security.rokalesalapitvany.com/report-ct'">
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
     <meta charset="UTF-8">
     <meta property="og:image" content="https://rokalesalapitvany.com/images/img12.webp">
+    <link rel="preconnect" href="//img.imageboss.me">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+        integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+        window.ImageBoss = {
+            srcPropKey: 'data-src',
+            lowsrcPropKey: 'src',
+            lowRes: true,
+            source: 'rokales',
+            devMode: false,
+            format: 'auto',
+            dpr: false
+        };
+    </script>
+    <script async src="//cdn.jsdelivr.net/gh/imageboss/imageboss-web@5.1.0/dist/imageboss.min.js"
+        type="text/javascript"></script>
 </head>
 
 
@@ -41,28 +58,34 @@
     </div>
     <div class="logo-container">
         <div class="left-logos">
-            <img src="/images/img12.webp" alt="Rókales logó" loading="lazy">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-imageboss-src="img12.webp"
+                alt="Rókales" data-imageboss-operation="width" data-imageboss-class="lazyload" />
         </div>
         <div class="right-logos">
             <div class="logo">
-                <a href="https://www.facebook.com/rokales" target="_blank"><img src="/images/fb.svg" alt="Image 13"></a>
+                <a href="https://www.facebook.com/rokales" target="_blank"><img
+                        src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-imageboss-src="fb.svg"
+                        alt="Facebook" data-imageboss-operation="cover" data-imageboss-class="lazyload" />
+                </a>
             </div>
             <div class="logo">
-                <a href="https://www.instagram.com/foxy_rokales/" target="_blank"><img src="/images/ig.svg"
-                        alt="Image 13"> </a>
+                <a href="https://www.instagram.com/foxy_rokales/" target="_blank"><img
+                        src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-imageboss-src="ig.svg"
+                        alt="Instagram" data-imageboss-operation="cover" data-imageboss-class="lazyload" /></a>
             </div>
             <div class="logo">
                 <a href="https://www.youtube.com/channel/UCYFLCYqjDyHeiN7zsNQthxA" target="_blank"><img
-                        src="/images/yt.svg" alt="Image 13"> </a>
+                        src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-imageboss-src="yt.svg"
+                        alt="YouTube" data-imageboss-operation="cover" data-imageboss-class="lazyload" /></a>
             </div>
         </div>
     </div>
 
     <div class="top-bg-content">
-        <div class="top-bg-button">
-            <a onclick="openDonation()">Támogatás</a>
+        <div class="top-bg-button" onclick="openDonation()">
+            Támogatás
         </div>
-        <div class="top-bg">
+        <div class="top-bg" data-imageboss-bg-src="img11.webp">
             <div class="top-bg-text">
                 <h1>Segítsük együtt a Rókákat</h1>
                 <h2>Számlaszámunk: 11702043-21463419<br>IBAN: HU89 11702043-21463419-00000000</h2>
@@ -71,13 +94,15 @@
             </div>
         </div>
     </div>
-    <div class="top-overlay">
+    <div class="top-overlay" data-imageboss-bg-src="img14.webp">
         <div class="card-title">
-            <a>A Rókales Története</a>
+            <div class="round">A Rókales Története</div>
         </div>
         <div class="box">
             <div class="imgbox">
-                <img src="images/img4.webp" alt="Ülő róka" loading="lazy">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-imageboss-src="img4.webp"
+                    alt="Ülő róka" data-imageboss-operation="cover" data-imageboss-cover-mode="attention"
+                    data-imageboss-class="lazyload" />
             </div>
             <div class="content">
                 <p>14 évvel ezelőtt kezdődött az a szeretet, amely az állatok felé húzott. 14 éve még csak kóbor
@@ -93,16 +118,18 @@
                     játszani, s nem féltette tőlem, sokszor egyedül hagyott velük.<br><br>Így kezdődött a
                     rókaszerelem
                     már jópár éve, azóta rengeteget tanultam tőlük.
-                    <a onclick="openDonation()"><span>Támogatás</span></a>
+                    <span class="contain" onclick="openDonation()">Támogatás</span>
                 </p>
             </div>
         </div>
         <div class="card-title">
-            <a>Szeretetből Alapítvány</a>
+            <div class="round">Szeretetből Alapítvány</div>
         </div>
         <div class="box">
             <div class="imgbox">
-                <img src="images/img5.webp" alt="Játékos róka" loading="lazy">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-imageboss-src="img5.webp"
+                    alt="Ülő róka" data-imageboss-operation="cover" data-imageboss-cover-mode="entropy"
+                    alt="Játékos róka" data-imageboss-class="lazyload" />
             </div>
             <div class="content">
                 <p>
@@ -139,15 +166,17 @@
                     keretek között, és a rókáknak a legoptimálisabb feltételeket biztosítva.
                     <br><br>
                     Rengeteg önkéntes van, akik az ország egész területén támogatják a céljainkat.
-                    <a onclick="openDonation()"><span>Támogatás</span></a>
+                    <span class="contain" onclick="openDonation()">Támogatás</span>
                 </p>
             </div>
             <div class="imgbox">
-                <img src="images/img6.webp" alt="Figyelő róka" loading="lazy">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-imageboss-src="img6.webp"
+                    alt="Figyelő róka" data-imageboss-operation="cover" data-imageboss-cover-mode="attention"
+                    data-imageboss-class="lazyload">
             </div>
         </div>
-        <div class="middle-bg">
-            <div class="bottom-overlay">
+        <div class="middle-bg" data-imageboss-bg-src="img2.webp">
+            <div class="bottom-overlay" data-imageboss-bg-src="img9.webp">
                 <div class="contant-container">
                     <div class="contact-splitter">
                         <div class="contact-text-box">
@@ -160,16 +189,33 @@
                             <h1>Önkéntesség</h1>
                             <form action="/api/volunteer" method="post">
                                 <div class="inputbox">
+                                    <div class="container"><label for="name">Név</label></div>
                                     <input type="text" name="name" required="required">
-                                    <span>Teljes név</span>
+                                    <span>Teljes hivatalos neved</span>
                                 </div>
                                 <div class="inputbox">
+                                    <div class="container"><label for="email">E-mail</label></div>
                                     <input type="email" name="email" required="required">
-                                    <span>E-mail cím</span>
+                                    <span>Olyan címet adj meg, amit gyakran olvasol</span>
                                 </div>
                                 <div class="inputbox">
+                                    <div class="container"><label for="text">Miben szeretnél segíteni?</label></div>
+                                    <select name="request" required="required">
+                                        <option value="1">Tárgyilagos adománnyal való segítés</option>
+                                        <option value="2">Menhelyen való önkéntesség</option>
+                                        <option value="3">Sérült rókák mentése / szállítása</option>
+                                        <option value="4">Egyéb</option>
+                                    </select>
+                                </div>
+                                <div class="inputbox">
+                                    <div class="container"><label for="text">Hol tudsz segíteni?</label></div>
+                                    <input type="text" name="location" required="required">
+                                    <span>Add meg, hogy hol tudsz segíteni (Település, Vármegye) </span>
+                                </div>
+                                <div class="inputbox">
+                                    <div class="container"><label for="text">Elérhetőség</label></div>
                                     <input type="text" name="facebook" required="required">
-                                    <span>Facebook profil (link)</span>
+                                    <span>Pl: Telefonszám, FB profil link</span>
                                 </div>
                                 <div class="inputbox">
                                     <input type="submit" name="submit" value="Küldés">
@@ -182,16 +228,19 @@
                             <h1>Kapcsolat</h1>
                             <form action="/api/contact" method="post">
                                 <div class="inputbox">
+                                    <div class="container"><label for="name">Név</label></div>
                                     <input type="text" name="name" required="required">
-                                    <span>Teljes név</span>
+                                    <span>Teljes hivatalos neved</span>
                                 </div>
                                 <div class="inputbox">
+                                    <div class="container"><label for="email">E-mail</label></div>
                                     <input type="email" name="email" required="required">
-                                    <span>E-mail cím</span>
+                                    <span>Olyan címet adj meg, amit gyakran olvasol</span>
                                 </div>
                                 <div class="inputbox">
+                                    <div class="container"><label for="text">Üzenet</label></div>
                                     <textarea name="message" required="required"></textarea>
-                                    <span>Üzenet</span>
+                                    <span>Írd le mit szeretnél közölni velünk</span>
                                 </div>
                                 <div class="inputbox">
                                     <input type="submit" name="submit" value="Küldés">
@@ -205,11 +254,7 @@
                     </div>
                 </div>
                 <div class="copyright">
-                    ©
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script> Rókales Alapítvány | Minden jog fenntartva
-
+                    © <span id="ev"></span> Rókales Alapítvány | Minden jog fenntartva
                 </div>
             </div>
             <style>
@@ -277,7 +322,6 @@
                 }
 
                 .top-bg {
-                    background: url(images/img11.webp);
                     background-size: cover;
                     background-position: center;
                     position: relative;
@@ -367,7 +411,6 @@
                 }
 
                 .middle-bg {
-                    background: url(images/img2.webp);
                     background-size: cover;
                     background-position: center;
                     position: absolute;
@@ -386,32 +429,23 @@
                     background-color: rgba(33, 77, 33, .4)
                 }
 
-                .top-overlay::after {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    opacity: .1;
-                    background-image: url(/images/img7.webp);
-                    background-repeat: repeat;
-                    z-index: -1
-                }
-
                 .card-title {
                     text-align: center;
                     color: #000;
                     font-size: 50px;
                     font-weight: 700;
-                    margin-top: 80px
+                    margin-top: 80px;
+                    background-color: transparent;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
 
-                .card-title a {
+                .card-title .round {
                     background-color: rgba(255, 255, 255, .4);
                     border-radius: 20px;
                     padding-left: 2%;
-                    padding-right: 2%
+                    padding-right: 2%;
                 }
 
                 .box {
@@ -424,18 +458,18 @@
                 }
 
                 .box .imgbox {
-                    height: auto;
-                    width: 50%;
+                    width: 40%;
+                    height: 40%;
                     margin: 5%;
                     border-radius: 30px;
                     overflow: hidden;
-                    box-shadow: 0 0 20px rgba(0, 0, 0, .5)
+                    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                    object-fit: scale-down;
                 }
 
                 .box .imgbox img {
                     width: 100%;
                     height: 100%;
-                    object-fit: cover
                 }
 
                 .box .content {
@@ -456,7 +490,7 @@
                     overflow-wrap: break-word
                 }
 
-                .box .content a {
+                .box .content .contain {
                     display: inline-block;
                     text-decoration: none;
                     color: #000;
@@ -476,7 +510,7 @@
                     cursor: pointer;
                 }
 
-                .box .content a:hover {
+                .box .content .contain:hover {
                     background: gold;
                     color: #000;
                     transition: .5s
@@ -489,19 +523,6 @@
                     width: 100%;
                     height: auto;
                     background-color: rgba(138, 43, 226, .8)
-                }
-
-                .bottom-overlay::after {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    opacity: 1;
-                    background-image: url(/images/img10.webp);
-                    background-repeat: repeat;
-                    z-index: -1
                 }
 
                 @media (max-width:600px) {
@@ -610,6 +631,32 @@
                     margin-bottom: 7%
                 }
 
+                .container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .contact-form label {
+                    text-align: center;
+                    position: relative;
+                    transform: translateY(-50%);
+                    font-size: 16px;
+                    color: #000;
+                    pointer-events: none;
+                    transition: .5s;
+                    background-color: rgba(99, 99, 99, .8);
+                    opacity: .5;
+                    border-radius: 10px;
+                    padding-left: 2%;
+                    padding-right: 2%;
+                    padding-top: 1%;
+                    padding-bottom: 1%;
+                    border-bottom: 2px solid #000;
+                    font-family: 'Source Code Pro', monospace;
+                }
+
+
                 .contact-form .inputbox input,
                 .contact-form .inputbox textarea {
                     width: 100%;
@@ -631,10 +678,10 @@
                     top: 45%;
                     transform: translateY(-50%);
                     font-size: 16px;
-                    color: #000;
+                    color: transparent;
                     pointer-events: none;
                     transition: .5s;
-                    background-color: rgba(99, 99, 99, .8);
+                    background-color: transparent;
                     opacity: .5;
                     border-radius: 10%;
                     margin-left: 1%;
@@ -644,8 +691,7 @@
                     padding-bottom: .25%
                 }
 
-                .contact-form .inputbox input:focus~span,
-                .contact-form .inputbox input:valid~span {
+                .contact-form .inputbox input:focus~span {
                     transform: translateY(-150%);
                     left: 0;
                     font-size: 12px;
@@ -654,12 +700,15 @@
                     color: #fff;
                     background-color: rgba(0, 0, 0, 1);
                     padding: .8%;
-                    border-radius: 10%;
-                    opacity: 1
+                    border-radius: 50px;
+                    padding-left: 4%;
+                    padding-right: 4%;
+                    padding-top: 1%;
+                    padding-bottom: 1%;
+                    opacity: 1;
                 }
 
-                .contact-form .inputbox textarea:focus~span,
-                .contact-form .inputbox textarea:valid~span {
+                .contact-form .inputbox textarea:focus~span {
                     transform: translateY(-180%);
                     left: 0;
                     font-size: 12px;
@@ -668,12 +717,32 @@
                     color: #fff;
                     background-color: rgba(0, 0, 0, 1);
                     padding: .8%;
-                    border-radius: 10%;
-                    opacity: 1
+                    border-radius: 50px;
+                    padding-left: 4%;
+                    padding-right: 4%;
+                    padding-top: 1%;
+                    padding-bottom: 1%;
+                    opacity: 1;
+                }
+
+                .contact-form .inputbox select {
+                    width: 100%;
+                    padding: 5px 0;
+                    font-size: 70%;
+                    color: #000;
+                    margin: 10px 0;
+                    border: none;
+                    border-bottom: 2px solid #000;
+                    outline: 0;
+                    border-radius: 10px;
+                    font-family: 'Source Code Pro', monospace;
+                    resize: both;
+                    word-wrap: break-word;
+                    text-align: center;
                 }
 
                 .contact-form h1 {
-                    margin: 0 0 15px;
+                    margin: 0 0 30px;
                     padding: 0;
                     color: #000;
                     text-align: center;
@@ -767,21 +836,19 @@
 
                     .contact-form .inputbox span {
                         position: absolute;
-                        left: 1%;
-                        top: 45%;
                         transform: translateY(-50%);
                         font-size: 16px;
-                        color: #000;
+                        color: transparent;
                         pointer-events: none;
                         transition: .5s;
-                        background-color: rgba(99, 99, 99, .8);
+                        background-color: transparent;
                         opacity: .5;
                         border-radius: 10%;
                         margin-left: 1%;
                         padding-left: 2%;
                         padding-right: 2%;
                         padding-top: .25%;
-                        padding-bottom: .25%
+                        padding-bottom: .25%;
                     }
                 }
 
@@ -844,7 +911,8 @@
                     margin-right: 3%;
                     margin-top: 3%;
                     text-decoration: none;
-                    cursor: pointer
+                    cursor: pointer;
+                    -webkit-touch-callout: none;
                 }
 
                 .close:focus,
@@ -949,6 +1017,8 @@
             </style>
             <script
                 nonce="8Hq&m6h^6fQzz2CUN93*H!&S$jH8D!m8Ms55Cj^ZtE!FA85%&Wtq7sn%D4LPZ6fkt67#ypAY#C%#LjeaKxGw&RD%$9c^&ASeUD9RA@#zy3Fv2%PE4h52VPHjn9Mrqjsv">
+                    document.getElementById("ev").innerHTML = new Date().getFullYear();
+
                     function closeDonation() {
                         document.getElementById("donation").style.display = "none";
                     }
@@ -960,7 +1030,6 @@
                             script.setAttribute("paypalExpress", "false");
                             script.defer = true;
                             document.body.appendChild(script);
-
                             var iframe = document.createElement("iframe");
                             iframe.id = "donateIFrame";
                             iframe.src = "https://donorbox.org/embed/ember-es-roka-baratsagban?default_interval=o&hide_donation_meter=true&show_content=true";
