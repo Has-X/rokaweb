@@ -199,12 +199,10 @@
         <div class="middle-bg" data-imageboss-bg-src="img2.webp">
             <div class="bottom-overlay">
                 <div class="contant-container">
-                    <div class="contact-splitter">
+                    <div class="volunteer-splitter">
                         <div class="contact-text-box">
-                            <h2>Írj nekünk bátran!</h2>
-                            <p>A kapcsolati űrlap használatával elérhetsz minket, akár önkéntes felajánlásokkal, akár
-                                sérült,
-                                mentésre szoruló kisrókákkal kapcsolatosan szeretnének megkeresni bennünket.</p>
+                            <h2>Jelentkezz Önkéntesnek!</h2>
+                            <p>Jelentkezz önkéntesnek és segíts nekünk, akár egyszeri alkalommal, akár napi szinten.</p>
                         </div>
                         <div class="contact-form" id="volunteer">
                             <form id="volunteer-form">
@@ -251,7 +249,7 @@
                             </form>
                         </div>
                     </div>
-                    <div class="contact-splitter">
+                    <div class="message-splitter">
                         <div class="contact-form" id="message">
                             <form id="message-form">
                                 <h2>Kapcsolat</h2>
@@ -283,8 +281,10 @@
                             </form>
                         </div>
                         <div class="contact-text-box">
-                            <h2>Jelentkezz Önkéntesnek!</h2>
-                            <p>Jelentkezz önkéntesnek és segíts nekünk, akár egyszeri alkalommal, akár napi szinten.</p>
+                            <h2>Írj nekünk bátran!</h2>
+                            <p>A kapcsolati űrlap használatával elérhetsz minket, akár önkéntes felajánlásokkal, akár
+                                sérült,
+                                mentésre szoruló kisrókákkal kapcsolatosan szeretnének megkeresni bennünket.</p>
                         </div>
                     </div>
                 </div>
@@ -644,13 +644,19 @@
                     height: auto
                 }
 
-                .contact-splitter {
+                .message-splitter {
                     width: 50%;
                     height: 100%;
                     padding: 2%;
                     box-sizing: border-box;
                 }
 
+                .volunteer-splitter {
+                    width: 50%;
+                    height: 100%;
+                    padding: 2%;
+                    box-sizing: border-box;
+                }
 
                 .contact-text-box {
                     margin: 0 0 20px;
@@ -895,14 +901,30 @@
                     font-weight: 500
                 }
 
-                @media (max-width:600px) {
+                @media (max-width:768px) {
                     .contant-container {
                         display: flex;
                         flex-direction: column-reverse
                     }
 
-                    .contact-splitter {
-                        flex-direction: column
+                    .volunteer-splitter {
+                        width: 100%;
+                        height: auto;
+                        flex-direction: column;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 6%;
+                    }
+
+                    .message-splitter {
+                        width: 100%;
+                        height: auto;
+                        flex-direction: column;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column-reverse;
                     }
 
                     .contact-text-box {
@@ -919,32 +941,13 @@
                     }
 
                     .contant-container {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
+                        justify-content: center;
                         align-items: center;
-                        width: 100%;
-                        height: auto
-                    }
-
-                    .contact-form {
-                        width: 100%;
                         height: auto;
-                        padding: 2%;
-                        box-sizing: border-box;
-                        background-color: rgba(255, 255, 255, .8);
-                        border-radius: 30px;
-                        margin-left: auto;
-                        margin-right: auto;
-                        margin-bottom: 10%;
-                        overflow-wrap: break-word
+                        flex-direction: column;
                     }
 
-                    .contact-form .inputbox {
-                        position: relative;
-                        width: 100%;
-                        margin-bottom: 7%
-                    }
+
 
                     .contact-form .inputbox input,
                     .contact-form .inputbox textarea {
