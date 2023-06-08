@@ -1230,7 +1230,7 @@
                     element.style.display = "flex";
                     element.style.backgroundColor = "#f9f943";
                     element.innerHTML = "<span class='t1'>Státusz</span><br><span class='t2'>Beküldés...</span>";
-                    const reponse = await fetch('https://3b42-2a09-bac5-39c6-478-00-72-12a.ngrok-free.app/volunteer', {
+                    const reponse = await fetch('https://api.rokalesalapitvany.com/volunteer', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -1255,7 +1255,7 @@
                     element.style.display = "flex";
                     element.style.backgroundColor = "#f9f943";
                     element.innerHTML = "<span class='t1'>Státusz</span><br><span class='t2'>Beküldés...</span>";
-                    const reponse = await fetch('http://0.0.0.0:8787/message', {
+                    const reponse = await fetch('https://api.rokalesalapitvany.com/message', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
