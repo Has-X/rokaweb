@@ -117,7 +117,7 @@
     </div>
     <div class="top-overlay">
         <div class="card-title">
-            <div class="round">A Rókales Története</div>
+            <div class="round"><h1>A Rókales Története</h1></div>
         </div>
         <div class="box">
             <div class="imgbox">
@@ -144,7 +144,7 @@
             </div>
         </div>
         <div class="card-title">
-            <div class="round">Szeretetből Alapítvány</div>
+            <div class="round"><h1>Szeretetből Alapítvány</h1></div>
         </div>
         <div class="box">
             <div class="imgbox">
@@ -208,7 +208,7 @@
                         </div>
                         <div class="contact-form" id="volunteer">
                             <form id="volunteer-form">
-                                <h1>Önkéntesség</h1>
+                                <h2>Önkéntesség</h2>
                                 <div class="inputbox">
                                     <div class="container"><label for="name">Név</label></div>
                                     <input type="text" name="name" id="volunteer-name" required="required">
@@ -254,7 +254,7 @@
                     <div class="contact-splitter">
                         <div class="contact-form" id="message">
                             <form id="message-form">
-                                <h1>Kapcsolat</h1>
+                                <h2>Kapcsolat</h2>
                                 <div class="inputbox">
                                     <div class="container"><label for="message-name">Név</label></div>
                                     <input type="text" name="name" id="message-name" required="required">
@@ -315,8 +315,6 @@
                 .logo-container .left-logos img {
                     width: 30%;
                     height: 30%;
-                    min-width: 228px;
-                    min-height: 72px;
                     margin-left: 5%
                 }
 
@@ -476,6 +474,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    transition: .5s;
                 }
 
                 .card-title .round {
@@ -483,6 +482,19 @@
                     border-radius: 20px;
                     padding-left: 2%;
                     padding-right: 2%;
+                    font-size: 80%;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+
+                .card-title .round:hover {
+                    background-color: rgba(255, 255, 255, .6);
+                    transition: .5s;
+                }
+
+                .card-title .round h1 {
+                    font-size: 100%;
+                    color: #000;
                 }
 
                 .box {
@@ -815,7 +827,7 @@
                     text-align: center;
                 }
 
-                .contact-form h1 {
+                .contact-form h2 {
                     margin: 0 0 30px;
                     padding: 0;
                     color: #000;
