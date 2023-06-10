@@ -17,8 +17,10 @@
     <meta name="csrf-token" content="ABC123">
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
     <meta name="referrer" content="no-referrer">
-    <!--<meta http-equiv="Content-Security-Policy" content="
+    <meta http-equiv="Content-Security-Policy" content="
     default-src 'self'
+        https://forms.rokalesalapitvany.com/
+        https://foxform-beta.rokales.workers.dev/
         https://challenges.cloudflare.com
         https://cdnjs.cloudflare.com
         https://donorbox.org
@@ -40,8 +42,8 @@
     img-src 'self'
         img.imageboss.me
         data:;
-    object-src 'none'"-->
-	<meta http-equiv="Expect-CT"
+    object-src 'none'"
+    <meta http-equiv="Expect-CT"
         content="enforce, max-age=30, report-uri='https://security.rokalesalapitvany.com/report-ct'">
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
@@ -1149,7 +1151,7 @@
                     }
                 }
             </style>
-            <script>
+            <script type="text/javascript">
                 document.getElementById("ev").innerHTML = new Date().getFullYear();
 
                 function closeDonation() {
@@ -1230,7 +1232,7 @@
                     element.style.display = "flex";
                     element.style.backgroundColor = "#f9f943";
                     element.innerHTML = "<span class='t1'>Státusz</span><br><span class='t2'>Beküldés...</span>";
-                    const reponse = await fetch('https://api.rokalesalapitvany.com/volunteer', {
+                    const reponse = await fetch('https://forms.rokalesalapitvany.com/volunteer', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -1243,6 +1245,9 @@
                             location: document.getElementById("volunteer-location").value,
                             captcha: code
                         })
+                    }).then(response => response.json()).then(data => {
+                        element.style.backgroundColor = data.color
+                        element.innerHTML = `<span class='t1'>${data.title}</span><br><span class='t2'>${data.message}</span>`;
                     });
                 }
                 async function messageCaptchaSuccess(code) {
@@ -1255,7 +1260,7 @@
                     element.style.display = "flex";
                     element.style.backgroundColor = "#f9f943";
                     element.innerHTML = "<span class='t1'>Státusz</span><br><span class='t2'>Beküldés...</span>";
-                    const reponse = await fetch('https://api.rokalesalapitvany.com/message', {
+                    const reponse = await fetch('https://forms.rokalesalapitvany.com/message', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -1266,7 +1271,10 @@
                             message: document.getElementById("message-message").value,
                             captcha: code
                         })
-                    });
+                    }).then (response => response.json()).then(data => {
+                            element.style.backgroundColor = `rgba(${data.color})`;
+                            element.innerHTML = `<span class='t1'>${data.title}</span><br><span class='t2'>${data.message}</span>`;
+                        });
                 }
 
                 function submitForm(num) {
@@ -1292,7 +1300,7 @@
                                 return;
                             } else {
                                 turnstile.render('.volunteer-captcha', {
-                                    sitekey: '1x00000000000000000000AA',
+                                    sitekey: '0x4AAAAAAAFt9zpGm14ytteM',
                                     callback: volunteerCaptchaSuccess,
                                     "error-callback": errorVolunteerCaptchaCallback,
                                     "unsupported-callback": unsupportedVolunteerCaptchaCallback,
@@ -1333,9 +1341,8 @@
                             }
                         }
                     }
-                }
-
-            </script>
+                };
+</script>
             <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
 </body>
 
