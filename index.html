@@ -1246,7 +1246,7 @@
                             captcha: code
                         })
                     }).then(response => response.json()).then(data => {
-                        element.style.backgroundColor = data.color
+                        element.style.backgroundColor = `rgba(${data.color})`;
                         element.innerHTML = `<span class='t1'>${data.title}</span><br><span class='t2'>${data.message}</span>`;
                     });
                 }
