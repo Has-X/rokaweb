@@ -1231,7 +1231,7 @@
                     element.style.display = "flex";
                     element.style.backgroundColor = "#f9f943";
                     element.innerHTML = "<span class='t1'>Státusz</span><br><span class='t2'>Beküldés...</span>";
-                    const reponse = await fetch('http://localhost:8787/volunteer', {
+                    const reponse = await fetch('https://forms.rokalesalapitvany.com/volunteer', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -1299,7 +1299,7 @@
                                 return;
                             } else {
                                 turnstile.render('.volunteer-captcha', {
-                                    sitekey: '1x00000000000000000000AA',
+                                    sitekey: '0x4AAAAAAAFt9zpGm14ytteM',
                                     callback: volunteerCaptchaSuccess,
                                     "error-callback": errorVolunteerCaptchaCallback,
                                     "unsupported-callback": unsupportedVolunteerCaptchaCallback,
