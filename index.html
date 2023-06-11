@@ -1215,10 +1215,7 @@
                         headers: {
                             "Content-Type": "application/json",
                         },
-                        body: JSON.stringify({
-                            name: name,
-                            email: email,
-                        }),
+                        body: body,
                     }).then((response) => response.json());
 
                     statusElement.style.backgroundColor = `rgba(${response.color})`;
