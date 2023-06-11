@@ -41,8 +41,7 @@
     img-src 'self'
         img.imageboss.me
         data:;
-    object-src 'none'"
-    <meta http-equiv="Expect-CT"
+    object-src 'none'" <meta http-equiv="Expect-CT"
         content="enforce, max-age=30, report-uri='https://security.rokalesalapitvany.com/report-ct'">
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
@@ -131,7 +130,7 @@
             </div>
             <div class="content">
                 <p>14 évvel ezelőtt kezdődött az a szeretet, amely az állatok felé húzott. 14 éve még csak kóbor
-                    cicákkal találkoztam, saját költségemen etettem és gondoztam, ivartalanítottam és gyógyítottam
+                    cicákkal találkoztam, saját költségemen etettem és gondoztam, ilettalanítottam és gyógyítottam
                     cica
                     kolóniákat. Egyszer csak, több, mint 4 éve a cicák mellé társult egy kis rókalány. A rókákkal
                     való
@@ -143,6 +142,7 @@
                     játszani, s nem féltette tőlem, sokszor egyedül hagyott velük.<br><br>Így kezdődött a
                     rókaszerelem
                     már jópár éve, azóta rengeteget tanultam tőlük.
+                    <br><br>
                     <span class="contain" onclick="openDonation()">Támogatás</span>
                 </p>
             </div>
@@ -193,6 +193,7 @@
                     keretek között, és a rókáknak a legoptimálisabb feltételeket biztosítva.
                     <br><br>
                     Rengeteg önkéntes van, akik az ország egész területén támogatják a céljainkat.
+                    <br><br>
                     <span class="contain" onclick="openDonation()">Támogatás</span>
                 </p>
             </div>
@@ -210,8 +211,8 @@
                             <h2>Jelentkezz Önkéntesnek!</h2>
                             <p>Jelentkezz önkéntesnek és segíts nekünk, akár egyszeri alkalommal, akár napi szinten.</p>
                         </div>
-                        <div class="contact-form" id="volunteer">
-                            <form id="volunteer-form">
+                        <div class="contact-form">
+                            <form id="volunteer">
                                 <h2>Önkéntesség</h2>
                                 <div class="inputbox">
                                     <div class="container"><label for="volunteer-name">Név</label></div>
@@ -224,7 +225,8 @@
                                     <span>Olyan címet adj meg, amit gyakran olvasol</span>
                                 </div>
                                 <div class="inputbox">
-                                    <div class="container"><label for="volunteer-request">Miben szeretnél segíteni?</label></div>
+                                    <div class="container"><label for="volunteer-request">Miben szeretnél
+                                            segíteni?</label></div>
                                     <select name="request" id="volunteer-request" required="required">
                                         <option value="1">Tárgyilagos adománnyal való segítés</option>
                                         <option value="2">Menhelyen való önkéntesség</option>
@@ -233,7 +235,8 @@
                                     </select>
                                 </div>
                                 <div class="inputbox">
-                                    <div class="container"><label for="volunteer-location">Hol tudsz segíteni?</label></div>
+                                    <div class="container"><label for="volunteer-location">Hol tudsz segíteni?</label>
+                                    </div>
                                     <input type="text" name="location" id="volunteer-location" required="required">
                                     <span>Add meg, hogy hol tudsz segíteni (Település, Vármegye) </span>
                                 </div>
@@ -250,14 +253,14 @@
                                 <div class="status" id="volunteer-status"></div>
                                 <div class="inputbox">
                                     <input type="button" name="submit" value="Küldés" id="volunteer-submit"
-                                        onclick=submitForm(1)>
+                                        onclick="submitForm('volunteer')">
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div class="message-splitter">
-                        <div class="contact-form" id="message">
-                            <form id="message-form" method="POST" action="">
+                        <div class="contact-form">
+                            <form id="message">
                                 <h2>Kapcsolat</h2>
                                 <div class="inputbox">
                                     <div class="container"><label for="message-name">Név</label></div>
@@ -282,7 +285,7 @@
                                 <div class="status" id="message-status"></div>
                                 <div class="inputbox">
                                     <input type="button" name="submit" value="Küldés" id="message-submit"
-                                        onclick="submitForm(2)">
+                                        onclick="submitForm('message')">
                                 </div>
                             </form>
                         </div>
@@ -547,22 +550,20 @@
 
                 .box .content .contain {
                     display: inline-block;
-                    text-decoration: none;
-                    color: #000;
+                    justify-content: center;
+                    align-items: center;
                     background: #fff;
-                    font-size: 30px;
-                    padding-left: 2%;
-                    padding-right: 2%;
-                    padding-top: .5%;
-                    font-weight: 500;
-                    border-radius: 10px;
-                    transition: .5s;
-                    margin-top: 5%;
+                    color: #000;
+                    font-size: 16px;
+                    font-weight: 700;
+                    padding: 8px 20px;
+                    border: none;
+                    outline: 0;
+                    cursor: pointer;
+                    border-radius: 20px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
                     margin-left: 50%;
                     transform: translateX(-50%);
-                    border-bottom: #000 solid 2px;
-                    font-family: "Roboto", sans-serif;
-                    cursor: pointer;
                 }
 
                 .box .content .contain:hover {
@@ -1159,12 +1160,12 @@
 
                 function openDonation() {
                     if (!document.getElementById("donateIFrame")) {
-                        var script = document.createElement("script");
+                        let script = document.createElement("script");
                         script.src = "https://donorbox.org/widget.js";
                         script.setAttribute("paypalExpress", "false");
                         script.defer = true;
                         document.body.appendChild(script);
-                        var iframe = document.createElement("iframe");
+                        let iframe = document.createElement("iframe");
                         iframe.id = "donateIFrame";
                         iframe.src = "https://donorbox.org/embed/ember-es-roka-baratsagban?default_interval=o&hide_donation_meter=true&show_content=true";
                         iframe.loading = "lazy";
@@ -1181,167 +1182,131 @@
                     document.getElementById("donation").style.display = "block";
                 }
 
-                function errorVolunteerCaptchaCallback() {
-                    document.getElementById("volunteer-captcha").style.boxShadow = "0 0 30px rgba(255,0,0,.8)";
+                function setBoxShadow(elementId, color) {
+                    document.getElementById(elementId).style.boxShadow = `0 0 30px ${color}`;
                 }
 
-                function unsupportedVolunteerCaptchaCallback() {
-                    document.getElementById("volunteer-captcha").style.boxShadow = "0 0 30px rgba(255,0,0,.8)";
+                function captchaCallback(elementId, color) {
+                    setBoxShadow(elementId, color);
                 }
 
-                function expiredVolunteerCaptchaCallback() {
-                    document.getElementById("volunteer-captcha").style.boxShadow = "0 0 30px rgba(255,0,0,.8)";
-                }
+                async function submitFormData(formElement, statusElement, endpoint, type) {
+                    let name = formElement.querySelector("#" + formElement.id + "-name").value;
+                    let email = formElement.querySelector("#" + formElement.id + "-email").value;
+                    let body;
 
-                function beforeInteractiveVolunteerCaptchaCallback() {
-                    document.getElementById("volunteer-captcha").style.boxShadow = "0 0 30px rgba(255,255,0,.8)";
-                }
+                    if (type === 1) {
+                        body = JSON.stringify({
+                            name: name,
+                            email: email,
+                            request: formElement.querySelector("#volunteer-request").value,
+                            location: formElement.querySelector("#volunteer-location").value,
+                            contact: formElement.querySelector("#volunteer-contact").value,
+                        });
+                    } else if (type === 2) {
+                        body = JSON.stringify({
+                            name: name,
+                            email: email,
+                            message: formElement.querySelector("#message-message").value,
+                        });
+                    }
+                    const response = await fetch(endpoint, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            name: name,
+                            email: email,
+                        }),
+                    }).then((response) => response.json());
 
-                function afterInteractiveVolunteerCaptchaCallback() {
-                    document.getElementById("volunteer-captcha").style.boxShadow = "0 0 30px rgba(0,0,0,.8)";
-                }
-
-                function errorMessageCaptchaCallback() {
-                    document.getElementById("message-captcha").style.boxShadow = "0 0 30px rgba(255,0,0,.8)";
-                }
-
-                function unsupportedMessageCaptchaCallback() {
-                    document.getElementById("message-captcha").style.boxShadow = "0 0 30px rgba(255,0,0,.8)";
-                }
-
-                function expiredMessageCaptchaCallback() {
-                    document.getElementById("message-captcha").style.boxShadow = "0 0 30px rgba(255,0,0,.8)";
-                }
-
-                function beforeInteractiveMessageCaptchaCallback() {
-                    document.getElementById("message-captcha").style.boxShadow = "0 0 30px rgba(255,255,0,.8)";
-                }
-
-                function afterInteractiveMessageCaptchaCallback() {
-                    document.getElementById("message-captcha").style.boxShadow = "0 0 30px rgba(0,0,0,.8)";
+                    statusElement.style.backgroundColor = `rgba(${response.color})`;
+                    statusElement.innerHTML = `<span class='t1'>${response.title}</span><br><span class='t2'>${response.message}</span>`;
                 }
 
                 async function volunteerCaptchaSuccess(code) {
-                    document.getElementById("volunteer-captcha").style.boxShadow = "0 0 30px rgba(0,255,0,.8)";
+                    setBoxShadow("volunteer-captcha", "0 0 30px rgba(0,255,0,.8)");
                     setTimeout(function () {
                         document.getElementById("volunteer-captcha").style.display = "none";
                     }, 500);
                     document.getElementById("volunteer-submit").style.display = "none";
-                    var element = document.getElementById("volunteer-status");
+                    let element = document.getElementById("volunteer-status");
                     element.style.display = "flex";
                     element.style.backgroundColor = "#f9f943";
-                    element.innerHTML = "<span class='t1'>Státusz</span><br><span class='t2'>Beküldés...</span>";
-                    const reponse = await fetch('https://forms.rokalesalapitvany.com/volunteer', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            name: document.getElementById("volunteer-name").value,
-                            email: document.getElementById("volunteer-email").value,
-                            request: document.getElementById("volunteer-request").value,
-                            contact: document.getElementById("volunteer-contact").value,
-                            location: document.getElementById("volunteer-location").value,
-                            captcha: code
-                        })
-                    }).then(response => response.json()).then(data => {
-                        element.style.backgroundColor = `rgba(${data.color})`;
-                        element.innerHTML = `<span class='t1'>${data.title}</span><br><span class='t2'>${data.message}</span>`;
-                    });
+                    element.innerHTML =
+                        "<span class='t1'>Státusz</span><br><span class='t2'>Jelentkezés beküldése...</span>";
+
+                    await submitFormData(
+                        document.getElementById("volunteer"),
+                        element,
+                        "https://forms.rokalesalapitvany.com/volunteer",
+                        1
+                    );
                 }
+
                 async function messageCaptchaSuccess(code) {
-                    document.getElementById("message-captcha").style.boxShadow = "0 0 30px rgba(0,255,0,.8)";
+                    setBoxShadow("message-captcha", "0 0 30px rgba(0,255,0,.8)");
                     setTimeout(function () {
                         document.getElementById("message-captcha").style.display = "none";
                     }, 500);
                     document.getElementById("message-submit").style.display = "none";
-                    var element = document.getElementById("message-status");
+                    let element = document.getElementById("message-status");
                     element.style.display = "flex";
                     element.style.backgroundColor = "#f9f943";
-                    element.innerHTML = "<span class='t1'>Státusz</span><br><span class='t2'>Beküldés...</span>";
-                    const reponse = await fetch('https://forms.rokalesalapitvany.com/message', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            name: document.getElementById("message-name").value,
-                            email: document.getElementById("message-email").value,
-                            message: document.getElementById("message-message").value,
-                            captcha: code
-                        })
-                    }).then (response => response.json()).then(data => {
-                            element.style.backgroundColor = `rgba(${data.color})`;
-                            element.innerHTML = `<span class='t1'>${data.title}</span><br><span class='t2'>${data.message}</span>`;
-                        });
+                    element.innerHTML =
+                        "<span class='t1'>Státusz</span><br><span class='t2'>Üzenet elküldése...</span>";
+
+                    await submitFormData(
+                        document.getElementById("message"),
+                        element,
+                        "https://forms.rokalesalapitvany.com/message",
+                        2
+                    );
                 }
 
-                function submitForm(num) {
-                    if (num == '1') {
-                        var name = document.getElementById("volunteer-name").value;
-                        var email = document.getElementById("volunteer-email").value;
-                        var request = document.getElementById("volunteer-request").value;
-                        var contact = document.getElementById("volunteer-contact").value;
-                        var location = document.getElementById("volunteer-location").value;
-                        if (name == "" || email == "" || request == "" || contact == "" || location == "") {
-                            var element = document.getElementById("volunteer-status");
-                            element.style.display = "flex";
-                            element.style.backgroundColor = "rgba(255,0,0,.8)";
-                            element.innerHTML = "<span class='t1'>Hiba!</span><br><span class='t2'>Kérlek töltsd ki az összes mezőt!</span>";
-                            return;
-                        } else {
-                            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                            if (!emailRegex.test(email)) {
-                                var element = document.getElementById("volunteer-status");
-                                element.style.display = "flex";
-                                element.style.backgroundColor = "rgba(255,0,0,.8)";
-                                element.innerHTML = "<span class='t1'>Hiba!</span><br><span class='t2'>Kérlek valós email címet adj meg!</span>";
-                                return;
-                            } else {
-                                turnstile.render('.volunteer-captcha', {
-                                    sitekey: '0x4AAAAAAAFt9zpGm14ytteM',
-                                    callback: volunteerCaptchaSuccess,
-                                    "error-callback": errorVolunteerCaptchaCallback,
-                                    "unsupported-callback": unsupportedVolunteerCaptchaCallback,
-                                    "expired-callback": expiredVolunteerCaptchaCallback,
-                                    "before-interactive-callback": beforeInteractiveVolunteerCaptchaCallback,
-                                    "after-interactive-callback": afterInteractiveVolunteerCaptchaCallback,
-                                });
-                            }
-                        }
-                    } else if (num == '2') {
-                        var name = document.getElementById("message-name").value;
-                        var email = document.getElementById("message-email").value;
-                        var message = document.getElementById("message-message").value;
-                        if (name == "" || email == "" || message == "") {
-                            var element = document.getElementById("message-status");
-                            element.style.display = "flex";
-                            element.style.backgroundColor = "rgba(255,0,0,.8)";
-                            element.innerHTML = "<span class='t1'>Hiba!</span><br><span class='t2'>Kérlek töltsd ki az összes mezőt!</span>";
-                            return;
-                        } else {
-                            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                            if (!emailRegex.test(email)) {
-                                var element = document.getElementById("message-status");
-                                element.style.display = "flex";
-                                element.style.backgroundColor = "rgba(255,0,0,.8)";
-                                element.innerHTML = "<span class='t1'>Hiba!</span><br><span class='t2'>Kérlek valós email címet adj meg!</span>";
-                                return;
-                            } else {
-                                turnstile.render('.message-captcha', {
-                                    sitekey: '0x4AAAAAAAFt9zpGm14ytteM',
-                                    callback: messageCaptchaSuccess,
-                                    "error-callback": errorMessageCaptchaCallback,
-                                    "unsupported-callback": unsupportedMessageCaptchaCallback,
-                                    "expired-callback": expiredMessageCaptchaCallback,
-                                    "before-interactive-callback": beforeInteractiveMessageCaptchaCallback,
-                                    "after-interactive-callback": afterInteractiveMessageCaptchaCallback,
-                                });
-                            }
-                        }
+                function submitForm(formId) {
+                    let formElement = document.getElementById(formId);
+                    let statusElement = document.getElementById(formId + "-status");
+                    let name = formElement.querySelector("#" + formId + "-name").value;
+                    let email = formElement.querySelector("#" + formId + "-email").value;
+                    if (
+                        name === "" ||
+                        email === "" ||
+                        (formId === "volunteer" &&
+                            (!formElement.querySelector("#volunteer-request").value ||
+                                !formElement.querySelector("#volunteer-location").value ||
+                                !formElement.querySelector("#volunteer-contact").value)) ||
+                        (formId === "message" && !formElement.querySelector("#message-message").value)
+                    ) {
+                        statusElement.style.display = "flex";
+                        statusElement.style.backgroundColor = "rgba(255, 0, 0, .8)";
+                        statusElement.innerHTML =
+                            "<span class='t1'>Hiba!</span><br><span class='t2'>Kérlek töltsd ki az összes mezőt!</span>";
+                        return;
                     }
-                };
-</script>
+
+                    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        statusElement.style.display = "flex";
+                        statusElement.style.backgroundColor = "rgba(255, 0, 0, .8)";
+                        statusElement.innerHTML =
+                            "<span class='t1'>Hiba!</span><br><span class='t2'>Kérlek valós email címet adj meg!</span>";
+                        return;
+                    }
+
+                    let captchaClass = formId === "volunteer" ? ".volunteer-captcha" : ".message-captcha";
+                    turnstile.render(captchaClass, {
+                        sitekey: "0x4AAAAAAAFt9zpGm14ytteM",
+                        callback: formId === "volunteer" ? volunteerCaptchaSuccess : messageCaptchaSuccess,
+                        "error-callback": captchaCallback.bind(null, formId + "-captcha", "rgba(255,0,0,.8)"),
+                        "unsupported-callback": captchaCallback.bind(null, formId + "-captcha", "rgba(255,0,0,.8)"),
+                        "expired-callback": captchaCallback.bind(null, formId + "-captcha", "rgba(255,0,0,.8)"),
+                        "before-interactive-callback": captchaCallback.bind(null, formId + "-captcha", "rgba(255,255,0,.8)"),
+                        "after-interactive-callback": captchaCallback.bind(null, formId + "-captcha", "rgba(0,0,0,.8)"),
+                    });
+                }
+            </script>
             <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
 </body>
 
