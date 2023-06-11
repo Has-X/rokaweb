@@ -1190,7 +1190,7 @@
                     setBoxShadow(elementId, color);
                 }
 
-                async function submitFormData(formElement, statusElement, endpoint, type) {
+                async function submitFormData(formElement, statusElement, endpoint, type, code) {
                     let name = formElement.querySelector("#" + formElement.id + "-name").value;
                     let email = formElement.querySelector("#" + formElement.id + "-email").value;
                     let body;
@@ -1202,12 +1202,14 @@
                             request: formElement.querySelector("#volunteer-request").value,
                             location: formElement.querySelector("#volunteer-location").value,
                             contact: formElement.querySelector("#volunteer-contact").value,
+                            captcha: code,
                         });
                     } else if (type === 2) {
                         body = JSON.stringify({
                             name: name,
                             email: email,
                             message: formElement.querySelector("#message-message").value,
+                            captcha: code,
                         });
                     }
                     const response = await fetch(endpoint, {
@@ -1238,7 +1240,8 @@
                         document.getElementById("volunteer"),
                         element,
                         "https://forms.rokalesalapitvany.com/volunteer",
-                        1
+                        1,
+                        code,
                     );
                 }
 
@@ -1258,7 +1261,8 @@
                         document.getElementById("message"),
                         element,
                         "https://forms.rokalesalapitvany.com/message",
-                        2
+                        2,
+                        code,
                     );
                 }
 
