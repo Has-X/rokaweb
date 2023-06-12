@@ -81,7 +81,7 @@
     <div class="logo-container">
         <div class="left-logos">
             <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-imageboss-src="img12.webp"
-                alt="Rókales" data-imageboss-operation="width" data-imageboss-class="lazyload" />
+                alt="Rókales" data-imageboss-operation="width" data-imageboss-class="lazyload" class="static" />
         </div>
         <div class="right-logos">
             <div class="logo">
@@ -110,7 +110,7 @@
         <div class="top-bg" data-imageboss-bg-src="img11.webp">
             <div class="top-bg-text">
                 <h1>Segítsük együtt a Rókákat</h1>
-                <h2>Számlaszámunk: 11702043-21463419<br>IBAN: HU89 11702043-21463419-00000000</h2>
+                <h2>Számlaszámunk: 11702043-21463419-00000000<br>IBAN: HU89 11702043-21463419-00000000</h2>
             </div>
             <div class="top-darker-bg">
             </div>
@@ -122,7 +122,7 @@
                 <h1>A Rókales Története</h1>
             </div>
         </div>
-        <div class="box">
+        <div class="box" id="b1">
             <div class="imgbox">
                 <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-imageboss-src="img4.webp"
                     alt="Ülő róka" data-imageboss-operation="cover" data-imageboss-cover-mode="attention"
@@ -152,11 +152,11 @@
                 <h1>Szeretetből Alapítvány</h1>
             </div>
         </div>
-        <div class="box">
+        <div class="box" id="b2">
             <div class="imgbox">
                 <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-imageboss-src="img5.webp"
                     alt="Ülő róka" data-imageboss-operation="cover" data-imageboss-cover-mode="entropy"
-                    alt="Játékos róka" data-imageboss-class="lazyload" />
+                    alt="Játékos róka" data-imageboss-class="lazyload" class="static" />
             </div>
             <div class="content">
                 <p>
@@ -173,7 +173,7 @@
                 </p>
             </div>
         </div>
-        <div class="box">
+        <div class="box" id="b3">
             <div class="content">
                 <p>
                     Egyre több támogató barát, ismeretlen ismerős bíztatott abban, hogy hozzak létre egy
@@ -200,18 +200,18 @@
             <div class="imgbox">
                 <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-imageboss-src="img6.webp"
                     alt="Figyelő róka" data-imageboss-operation="cover" data-imageboss-cover-mode="attention"
-                    data-imageboss-class="lazyload">
+                    data-imageboss-class="lazyload" class="slide-left">
             </div>
         </div>
         <div class="middle-bg" data-imageboss-bg-src="img2.webp">
             <div class="bottom-overlay">
                 <div class="contant-container">
                     <div class="volunteer-splitter">
-                        <div class="contact-text-box">
+                        <div class="contact-text-box" id="v1">
                             <h2>Jelentkezz Önkéntesnek!</h2>
                             <p>Jelentkezz önkéntesnek és segíts nekünk, akár egyszeri alkalommal, akár napi szinten.</p>
                         </div>
-                        <div class="contact-form">
+                        <div class="contact-form" id="v2">
                             <form id="volunteer">
                                 <h2>Önkéntesség</h2>
                                 <div class="inputbox">
@@ -259,7 +259,7 @@
                         </div>
                     </div>
                     <div class="message-splitter">
-                        <div class="contact-form">
+                        <div class="contact-form" id="v3">
                             <form id="message">
                                 <h2>Kapcsolat</h2>
                                 <div class="inputbox">
@@ -289,7 +289,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="contact-text-box">
+                        <div class="contact-text-box" id="v4">
                             <h2>Írj nekünk bátran!</h2>
                             <p>A kapcsolati űrlap használatával elérhetsz minket, akár önkéntes felajánlásokkal, akár
                                 sérült,
@@ -305,7 +305,7 @@
                 body {
                     margin: 0;
                     padding: 0;
-                    font-family: Montserrat, sans-serif;
+                    font-family: 'Roboto', 'Open Sans', 'Montserrat', 'Lato', 'Playfair Display', sans-serif;
                     overflow-wrap: break-word
                 }
 
@@ -376,16 +376,29 @@
                     overflow: hidden
                 }
 
-                .top-bg::before {
+                .top-bg:before {
                     content: "";
                     position: absolute;
                     top: 0;
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    z-index: 1;
-                    background-color: rgba(0, 0, 0, .5);
-                    background: linear-gradient(to right, rgba(0, 0, 0, .3) 0, rgba(0, 0, 0, .2) 10%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, .2) 90%, rgba(0, 0, 0, .3) 100%)
+                    background: linear-gradient(to right,
+                            rgba(0, 0, 0, .8) 0%,
+                            rgba(0, 0, 0, .5) 50%,
+                            rgba(0, 0, 0, .8) 100%);
+                    animation: top-bg-animation 2s linear forwards;
+                    opacity: 0;
+                }
+
+                @keyframes top-bg-animation {
+                    0% {
+                        opacity: 1;
+                    }
+
+                    100% {
+                        opacity: 0.3;
+                    }
                 }
 
                 .top-darker-bg {
@@ -458,7 +471,7 @@
                     background-size: cover;
                     background-position: center;
                     position: absolute;
-                    height: 500px;
+                    height: 700px;
                     width: 100%;
                     z-index: -1;
                     background-attachment: fixed
@@ -471,6 +484,18 @@
                     width: 100%;
                     height: auto;
                     background-color: rgba(33, 77, 33, .4)
+                }
+
+                .top-overlay::before,
+                .top-overlay::after {
+                    content: "";
+                    position: absolute;
+                    top: -2px;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background-color: rgba(0, 0, 0);
+                    z-index: 1;
                 }
 
                 .card-title {
@@ -512,7 +537,28 @@
                     justify-content: space-between;
                     align-items: center;
                     width: 100%;
-                    height: 100%
+                    height: 100%;
+                    position: relative;
+                    z-index: 1;
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                .box.animate {
+                    animation: box-animation 1s ease-in-out;
+                    animation-fill-mode: forwards;
+                }
+
+                @keyframes box-animation {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
                 }
 
                 .box .imgbox {
@@ -522,12 +568,28 @@
                     border-radius: 30px;
                     overflow: hidden;
                     box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-                    object-fit: scale-down;
+                    display: flex;
+                    transition: all .5s ease-in-out;
                 }
+
+                .box .imgbox:hover {
+                    outline: 7px black;
+                    outline-offset: 10px;
+                    outline-style: dashed;
+                    transition: all .5s ease-in-out;
+                }
+
+                .box .imgbox:hover img {
+                    transform: scale(1.2);
+                    transition: all .5s ease-in-out;
+                }
+
 
                 .box .imgbox img {
                     width: 100%;
                     height: 100%;
+                    transition: opacity 1s, transform 1s;
+                    transition: all .5s ease-in-out;
                 }
 
                 .box .content {
@@ -579,6 +641,17 @@
                     width: 100%;
                     height: auto;
                     background-color: rgba(146, 39, 245, 1)
+                }
+
+                .bottom-overlay:before {
+                    content: "";
+                    position: absolute;
+                    top: -30px;
+                    left: 0;
+                    width: 100%;
+                    height: 30px;
+                    background-image: linear-gradient(to top, rgba(146, 39, 245, 1), rgba(146, 39, 245, 0));
+                    z-index: 1
                 }
 
                 @media (max-width:600px) {
@@ -666,17 +739,62 @@
                 }
 
                 .contact-text-box {
-                    margin: 0 0 20px;
+                    margin: 20px 20px 20px;
                     padding: 5%;
                     background-color: rgba(255, 255, 255, .8);
                     border-radius: 30px;
-                    overflow-wrap: break-word
+                    overflow-wrap: break-word;
+                    outline: 7px dotted rgba(0, 0, 0, 1);
+                    outline-offset: 11px;
+                    opacity: 0;
+                    overflow-wrap: break-word;
+                    word-wrap: break-word;
+                    hyphens: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
+
+                .contact-text-box.animate-top {
+                    animation: text-box-animation-top 1s ease-in-out;
+                    animation-fill-mode: forwards;
+                }
+
+                .contact-text-box.animate-bottom {
+                    animation: text-box-animation-bottom 1s ease-in-out;
+                    animation-fill-mode: forwards;
+                }
+
+                @keyframes text-box-animation-top {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(-60px);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+
+                @keyframes text-box-animation-bottom {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(200px);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
                 }
 
 
                 .contact-form {
                     align-items: center;
-                    margin-top: 5%;
+                    margin-top: 10%;
                     width: 50%;
                     min-width: 320px;
                     height: auto;
@@ -687,7 +805,44 @@
                     margin-left: auto;
                     margin-right: auto;
                     margin-bottom: 10%;
-                    overflow-wrap: break-word
+                    overflow-wrap: break-word;
+                    opacity: 0;
+                    outline: 7px solid rgba(0, 0, 0, 1);
+                    outline-offset: 10px;
+                }
+
+                .contact-form.animate-left {
+                    animation: contact-animation-left 1s ease-in-out;
+                    animation-fill-mode: forwards;
+                }
+
+                .contact-form.animate-right {
+                    animation: contact-animation-right 1s ease-in-out;
+                    animation-fill-mode: forwards;
+                }
+
+                @keyframes contact-animation-left {
+                    0% {
+                        opacity: 0;
+                        transform: translateX(200px);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+
+                @keyframes contact-animation-right {
+                    0% {
+                        opacity: 0;
+                        transform: translateX(-200px);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
                 }
 
                 .contact-form .volunteer-captcha {
@@ -758,11 +913,13 @@
                     color: #000;
                     margin: 10px 0;
                     border: none;
-                    border-bottom: 2px solid #000;
+                    border-bottom: 3px solid #000;
                     outline: 0;
                     resize: none;
                     border-radius: 10px;
-                    font-family: 'Source Code Pro', monospace
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+                    transition: all .5s ease-in;
+                    box-shadow: 0 0 20px rgba(0, 0, 0, .4);
                 }
 
                 .contact-form .inputbox span {
@@ -820,7 +977,7 @@
 
                 .contact-form .inputbox input:valid,
                 .contact-form .inputbox textarea:valid {
-                    border-bottom: 5px solid green;
+                    border-bottom: 3px solid #2ecc40;
                 }
 
 
@@ -846,16 +1003,22 @@
                     color: #000;
                     text-align: center;
                     font-size: 30px;
-                    font-weight: 500
+                    font-weight: 500;
                 }
 
                 .contact-text-box h2 {
-                    margin: 0 0 6%;
-                    padding: 0;
-                    color: #444;
+                    margin: 5px auto 20px;
+                    padding-top: 3%;
+                    padding-bottom: 3%;
+                    color: #fff;
                     text-align: center;
                     font-size: 150%;
-                    font-weight: 500
+                    font-weight: 500;
+                    background-color: #000;
+                    border-radius: 10px;
+                    padding: 1%;
+                    text-align: center;
+                    display: inline-block;
                 }
 
                 .contact-form .status {
@@ -903,9 +1066,8 @@
                     margin: 0 0 15px;
                     padding: 0;
                     color: #000;
-                    text-align: left;
                     font-size: 100%;
-                    font-weight: 500
+                    font-weight: 500;
                 }
 
                 @media (max-width:768px) {
@@ -944,7 +1106,7 @@
                         margin-left: auto;
                         margin-right: auto;
                         margin-bottom: 10%;
-                        overflow-wrap: break-word
+                        overflow-wrap: break-word;
                     }
 
                     .contant-container {
@@ -1153,6 +1315,38 @@
             </style>
             <script type="text/javascript">
                 document.getElementById("ev").innerHTML = new Date().getFullYear();
+
+                const boxIds = ["b1", "b2", "b3", "v1", "v2", "v3", "v4"]
+                const options = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.3
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            if (entry.target.id.includes('b')) {
+                                entry.target.classList.add('animate');
+                            } else if (entry.target.id === 'v2') {
+                                entry.target.classList.add('animate-right');
+                            } else if (entry.target.id === 'v3') {
+                                entry.target.classList.add('animate-left');
+                            } else if (entry.target.id === 'v1') {
+                                entry.target.classList.add('animate-top');
+                            } else {
+                                entry.target.classList.add('animate-bottom');
+                            }
+                        }
+                    });
+                }, options);
+
+                boxIds.forEach(boxId => {
+                    console.log(boxId);
+                    console.log(document.getElementById('v1'));
+                    observer.observe(document.getElementById(boxId));
+                });
+
 
                 function closeDonation() {
                     document.getElementById("donation").style.display = "none";
