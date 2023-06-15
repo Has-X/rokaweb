@@ -80,7 +80,7 @@
     <div class="logo-container">
         <div class="left-logos">
             <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-imageboss-src="img12.webp"
-                alt="Rókales" data-imageboss-operation="width" data-imageboss-class="lazyload" class="static" />
+                alt="Rókales" data-imageboss-class="lazyload" />
         </div>
         <div class="right-logos">
             <div class="logo">
@@ -105,9 +105,11 @@
     <div class="top-bg-content">
         <div class="top-bg-text">
             <h1>Segítsük együtt a Rókákat</h1>
-            <h3 onclick="openDonation()"> Támogatás
-            </h3>
-            <h2>Számlaszámunk: <p id="c2c">11702043-21463419-00000000</p><br>IBAN: <p id="c2c">HU89
+            <button onclick="openDonation()"> Támogatás
+            </button>
+            <h2><span id="description">Számlaszámunk:</span>
+                <p id="c2c">11702043-21463419-00000000</p><br><span id="description">IBAN:</span>
+                <p id="c2c">HU89
                     11702043-21463419-00000000</p>
             </h2>
         </div>
@@ -141,7 +143,7 @@
                     rókaszerelem
                     már jópár éve, azóta rengeteget tanultam tőlük.
                     <br><br>
-                    <span class="contain" onclick="openDonation()">Támogatás</span>
+                    <button class="contain" onclick="openDonation()">Támogatás</button>
                 </p>
             </div>
         </div>
@@ -192,7 +194,7 @@
                     <br><br>
                     Rengeteg önkéntes van, akik az ország egész területén támogatják a céljainkat.
                     <br><br>
-                    <span class="contain" onclick="openDonation()">Támogatás</span>
+                    <button class="contain" onclick="openDonation()">Támogatás</button>
                 </p>
             </div>
             <div class="imgbox">
@@ -310,7 +312,7 @@
                 .logo-container {
                     display: flex;
                     align-items: center;
-                    margin: 1%;
+                    margin: 1em;
                 }
 
                 .logo-container .left-logos {
@@ -321,7 +323,7 @@
                 }
 
                 .logo-container .left-logos img {
-                    width: 15%;
+                    width: 12em;
                     height: auto;
                     margin-right: 5px;
                     object-fit: cover;
@@ -364,7 +366,7 @@
                     background-size: cover;
                     background-position: center;
                     position: relative;
-                    height: 500px;
+                    height: 30em;
                     width: 100%;
                     z-index: -1;
                     background-attachment: fixed;
@@ -382,9 +384,9 @@
                     opacity: 1
                 }
 
-                .top-bg-text h3 {
+                .top-bg-text button {
                     position: absolute;
-                    top: 60%;
+                    top: 15em;
                     left: 5%;
                     background: #fff;
                     color: #000;
@@ -399,7 +401,7 @@
                     display: inline-block;
                 }
 
-                .top-bg-text h3:hover {
+                .top-bg-text button:hover {
                     background: #000;
                     color: #fff;
                     transition: .5s
@@ -407,35 +409,43 @@
 
                 .top-bg-text h1 {
                     position: absolute;
-                    top: 20%;
+                    top: 2em;
                     left: 5%;
                     color: #fff;
                     font-size: 40px;
                     font-weight: 700;
                     text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+
                 }
 
                 .top-bg-text h2 {
                     position: absolute;
-                    top: 80%;
+                    top: 13em;
                     left: 5%;
                     color: #fff;
-                    font-size: 24px;
+                    font-size: 1.5em;
                     font-weight: 700;
                     text-shadow: 0 0 10px rgba(0, 0, 0, .5);
                     overflow-wrap: break-word;
+                }
+
+                .top-bg-text h2 span {
+                    background-color: rgba(0, 0, 0, .7);
+                    padding: 0.1em;
+                    margin-left: 0.01em;
+                    border-radius: 0.2em;
                 }
 
                 .top-bg-text h2 p {
                     display: inline-block;
                     position: relative;
-                    padding: 0 1em;
+                    padding: 0 0.3em;
                     color: #fff;
                     font-size: 24px;
                     font-weight: 700;
                     text-shadow: 0 0 10px rgba(0, 0, 0, .5);
                     overflow-wrap: break-word;
-                    background-color: gray;
+                    background-color: rgba(0, 0, 0, .3);
                     border-radius: 10px;
                     cursor: pointer;
                 }
@@ -456,19 +466,9 @@
                     left: 0;
                     width: 100%;
                     height: auto;
-                    background-color: rgba(33, 77, 33, .4)
-                }
-
-                .top-overlay::after,
-                .top-overlay::before {
-                    content: "";
-                    position: absolute;
-                    top: -2px;
-                    left: 0;
-                    width: 100%;
-                    height: 4px;
-                    background-color: rgba(0, 0, 0);
-                    z-index: 1
+                    background-color: rgba(33, 77, 33, .4);
+                    border-top: rgba(0, 0, 0) 4px solid;
+                    border-bottom: rgba(0, 0, 0) 4px solid;
                 }
 
                 .card-title {
@@ -548,7 +548,7 @@
                 .box .imgbox:hover {
                     outline: 7px #000;
                     outline-offset: 10px;
-                    outline-style: dashed;
+                    outline-style: solid;
                     transition: all .5s ease-in-out
                 }
 
@@ -1051,16 +1051,16 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 30px;
-                    height: 30px;
+                    width: 1em;
+                    height: 1em;
                     border-radius: 50%;
                     background-color: gray;
                     color: #fff;
                     font-size: 25px;
                     font-weight: 700;
                     text-align: center;
-                    margin-right: 3%;
-                    margin-top: 3%;
+                    margin-right: 0.5em;
+                    margin-top: 0.5em;
                     text-decoration: none;
                     cursor: pointer;
                     -webkit-touch-callout: none
@@ -1084,7 +1084,7 @@
                 }
 
                 .modal-header-text {
-                    right: 80px;
+                    right: 3em;
                     text-align: center;
                     display: flex;
                     float: center;
@@ -1148,21 +1148,7 @@
                     }
 
                     .modal-header-text {
-                        right: 15%
-                    }
-
-                    .modal-content {
-                        width: 100%;
-                        height: 100%;
-                        overflow-x: hidden
-                    }
-
-                    .close {
-                        width: 25px;
-                        height: 25px;
-                        font-size: 15px;
-                        margin-top: 10px;
-                        margin-right: 20px
+                        right: 2.5em;
                     }
 
                     .contact-form {
@@ -1180,32 +1166,10 @@
                         margin: 10px 17%;
                     }
 
-                    .modal-header-text {
-                        font-size: 20px;
-                        right: 15%
-                    }
-
                     .top-bg-text {
                         justify-content: center;
                         align-items: center;
                         flex-direction: column;
-                        margin-top: 10%
-                    }
-
-                    .top-bg-text h1 {
-                        top: 12%;
-                    }
-
-                    .top-bg-text h2 {
-                        top: 42%;
-                    }
-
-                    .top-bg-text h2 p {
-                        font-size: medium;
-                    }
-
-                    .top-bg-text h3 {
-                        top: 36%;
                     }
 
                     .logo-container .left-logos {
