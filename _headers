@@ -1,6 +1,7 @@
 /*
   X-XSS-Protection: "1; mode=block"
   X-Frame-Options: "deny"
+  X-Content-Type-Options: nosniff
   Strict-Transport-Security: "max-age=31536000; includeSubDomains; preload"
   Referrer-Policy: "no-referrer"
   Content-Security-Policy: "default-src 'self' https://forms.rokalesalapitvany.com/ https://challenges.cloudflare.com https://cdnjs.cloudflare.com https://donorbox.org img.imageboss.me cdn.jsdelivr.net; script-src 'self' https://donorbox.org https://challenges.cloudflare.com 'unsafe-inline' https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js cdn.jsdelivr.net/gh/imageboss/imageboss-web@5.1.0/dist/imageboss.min.js https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; frame-src https://donorbox.org https://challenges.cloudflare.com; img-src 'self' img.imageboss.me data:; object-src 'none'; report-uri https://rokales.report-uri.com/r/d/csp/enforce;"
