@@ -40,8 +40,10 @@
     img-src 'self'
         img.imageboss.me
         data:;
-    object-src 'none'" <meta http-equiv="Expect-CT"
-        content="enforce, max-age=30, report-uri='https://security.rokalesalapitvany.com/report-ct'">
+    object-src 'none';
+    report-uri 
+    https://rokales.report-uri.com/r/d/csp/enforce;"" <meta http-equiv=" Expect-CT"
+        content="enforce, max-age=30, report-uri='https://rokales.report-uri.com/r/d/ct/enforce'">
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
     <meta charset="UTF-8">
@@ -1148,7 +1150,7 @@
                     }
 
                     .modal-header-text {
-                        right: 2.5em;
+                        right: 2.25em;
                     }
 
                     .contact-form {
@@ -1159,6 +1161,9 @@
                         align-items: center;
                     }
 
+                    .contact-form .inputbox {
+                        width: 20em;
+                    }
 
                     .contact-form .message-captcha,
                     .contact-form .volunteer-captcha {
@@ -1205,7 +1210,6 @@
 
                 const copyboxes = document.querySelectorAll("#c2c");
                 copyboxes.forEach(element => {
-                    console.log(element)
                     element.addEventListener("click", function () {
                         let text = element.innerText;
                         let textarea = document.createElement("textarea");
