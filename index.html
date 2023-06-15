@@ -310,57 +310,54 @@
                 .logo-container {
                     display: flex;
                     align-items: center;
-                    margin: 1%
+                    margin: 1%;
                 }
 
                 .logo-container .left-logos {
                     display: flex;
                     justify-content: flex-start;
-                    width: 50%
+                    flex-grow: 1;
+                    flex-wrap: wrap;
                 }
 
                 .logo-container .left-logos img {
-                    width: 30%;
-                    height: 30%;
-                    margin-left: 5%
+                    width: 15%;
+                    height: auto;
+                    margin-right: 5px;
+                    object-fit: cover;
                 }
 
                 .logo-container .right-logos {
                     display: flex;
                     justify-content: flex-end;
-                    width: 50%
-                }
-
-                .logo-container .right-logos .logo a img {
-                    width: 5vh;
-                    height: 5vh;
+                    align-items: center;
+                    margin-left: 10%;
                 }
 
                 .logo-container .right-logos .logo {
-                    width: 10vh;
-                    height: 10vh;
+                    width: 3em;
+                    height: 3em;
                     border-radius: 50%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     margin-right: 5px;
-                    background-color: #deb887
+                    background-color: #deb887;
                 }
 
                 .logo-container .right-logos .logo:hover {
                     background-color: brown;
-                    border-radius: 50%;
-                    transition: .5s
+                    transition: .5s;
                 }
 
                 .logo-container .right-logos .logo a {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 100%;
-                    height: 100%;
+                    width: 2em;
+                    height: 2em;
                     border-radius: 50%;
-                    transition: .5s
+                    transition: .5s;
                 }
 
                 .top-bg {
@@ -1188,21 +1185,6 @@
                         right: 15%
                     }
 
-                    .logo-container .left-logos {
-                        width: 50%;
-                        margin-bottom: 3%;
-                        margin-top: 3%;
-                        margin-right: 5%;
-                    }
-
-                    .logo-container .left-logos img {
-                        width: 100%;
-                    }
-
-                    .logo-container .right-logos {
-                        margin-left: 5%;
-                    }
-
                     .top-bg-text {
                         justify-content: center;
                         align-items: center;
@@ -1211,7 +1193,7 @@
                     }
 
                     .top-bg-text h1 {
-                        top: 20%;
+                        top: 12%;
                     }
 
                     .top-bg-text h2 {
@@ -1224,6 +1206,17 @@
 
                     .top-bg-text h3 {
                         top: 36%;
+                    }
+
+                    .logo-container .left-logos {
+                        justify-content: center;
+                    }
+
+                    .logo-container .left-logos img {
+                        width: 10em;
+                        height: auto;
+                        margin-right: 5px;
+                        object-fit: cover;
                     }
 
                 }
