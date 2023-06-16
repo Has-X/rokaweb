@@ -4,5 +4,6 @@ RewriteCond %{REQUEST_URI} !^robots.txt [OR]
 RewriteCond %{REQUEST_URI} !^sitemap.xml [OR]
 RewriteCond %{REQUEST_URI} !^/.well-known [OR]
 RewriteCond %{REQUEST_URI} !^/icons [OR]
-RewriteCond %{REQUEST_URI} !^/security.txt
+RewriteCond %{REQUEST_URI} !^/security.txt [OR]
+RewriteCond %{REQUEST_URI} !^/arc-sw.js [OR]
 RewriteRule ^(.*)$ /index.html [L]
