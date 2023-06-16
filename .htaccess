@@ -5,5 +5,5 @@ RewriteCond %{REQUEST_URI} !^sitemap.xml [OR]
 RewriteCond %{REQUEST_URI} !^/.well-known [OR]
 RewriteCond %{REQUEST_URI} !^/icons [OR]
 RewriteCond %{REQUEST_URI} !^/security.txt [OR]
-RewriteCond %{REQUEST_URI} !^/arc-sw.js [OR]
+RewriteCond %{REQUEST_URI} !^/arc-sw.js
 RewriteRule ^(.*)$ /index.html [L]
