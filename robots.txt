@@ -1,4 +1,6 @@
 User-agent: *
 Disallow: 
-Disallow: /cgi-bin/
+Disallow: /cgi-bin/ 
+Disallow: forms.rokalesalapitvany.com/
+Disallow: messages.rokalesalapitvany.com/
 Sitemap: https://rokalesalapitvany.com/sitemap.xml
