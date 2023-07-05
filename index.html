@@ -990,7 +990,15 @@
                     overflow-x: hidden;
                     -ms-overflow-style: none;
                     scrollbar-width: none;
-                    display: none
+                    display: none;
+                }
+
+                .modal::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .modal {
+                    -ms-overflow-style: none;
                 }
 
                 .modal-content {
@@ -1003,7 +1011,9 @@
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
-                    overflow-x: hidden
+                    overflow-x: hidden;
+                    scrollbar-width: none;
+                    -ms-overflow-style: none
                 }
 
                 .top-bg-button {
@@ -1377,9 +1387,9 @@
             </script>
             <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
 
-            <div id="fb-root"></div>
+            <div id="fb-root" style="z-index: 5000;"></div>
 
-            <div id="fb-customer-chat" class="fb-customerchat">
+            <div id="fb-customer-chat" class="fb-customerchat" style="z-index: 5000;">
             </div>
 
             <script>
