@@ -1176,10 +1176,12 @@
                     padding-bottom: 1%
                 }
 
-                #fb-customer-chat {
+                .fb-customer-chat {
                     position: fixed;
         z-index: 9999;
                 }
+
+
             </style>
             <script type="text/javascript">
                 document.getElementById("ev").innerHTML = new Date().getFullYear();
@@ -1390,9 +1392,9 @@
             </script>
             <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
 
-            <div id="fb-root" style="z-index: 5000;"></div>
+            <div id="fb-root"></div>
 
-            <div id="fb-customer-chat" class="fb-customerchat" style="z-index: 5000;">
+            <div id="fb-customer-chat" class="fb-customerchat">
             </div>
 
             <script>
